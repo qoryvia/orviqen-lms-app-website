@@ -1,0 +1,54 @@
+import React from "react";
+import { FiChevronDown, FiHelpCircle } from "react-icons/fi";
+import { faqs } from "../data/homeData";
+
+const HomeFAQ = () => {
+  return (
+    <section className="bg-slate-50 py-14 sm:py-16 lg:py-20">
+      <div className="px-6 xl:px-30">
+        {/* Section Content */}
+        <div className="max-w-3xl">
+          <div className="mb-3 inline-flex items-center gap-2 border border-[#A51C30]/15 bg-[#A51C30]/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#A51C30]">
+            <FiHelpCircle />
+            FAQ
+          </div>
+
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+            Frequently asked questions
+          </h2>
+
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
+            Find answers to common questions about our programs, learning
+            experience and getting started.
+          </p>
+        </div>
+
+        {/* FAQ */}
+        <div className="mt-8  space-y-2">
+          {faqs.map((faq) => (
+            <details
+              key={faq.question}
+              className="group border border-slate-200 bg-white"
+            >
+              <summary className="flex cursor-pointer list-none items-center gap-4 px-5 py-4 sm:px-6 sm:py-5">
+                <span className="flex-1 text-sm font-semibold leading-6 text-slate-900 sm:text-base">
+                  {faq.question}
+                </span>
+
+                <FiChevronDown className="shrink-0 text-slate-400 transition-transform group-open:rotate-180" />
+              </summary>
+
+              <div className="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6">
+                <p className="pl-7 text-sm leading-6 text-slate-600">
+                  {faq.answer}
+                </p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HomeFAQ;
