@@ -59,10 +59,10 @@ const Navbar = () => {
           <div className="hidden items-center lg:flex">
             <div className="flex items-center gap-7">
               <Link
-                href="/programs"
+                href="/"
                 className="text-[14px] font-medium text-slate-700 transition-colors hover:text-[#A41034]"
               >
-                Programs
+                Home
               </Link>
 
               <Link
@@ -98,6 +98,12 @@ const Navbar = () => {
                 className="text-[14px] font-medium text-slate-700 transition-colors hover:text-[#A41034]"
               >
                 About
+              </Link>
+              <Link
+                href="/blogs"
+                className="text-[14px] font-medium text-slate-700 transition-colors hover:text-[#A41034]"
+              >
+                Blogs
               </Link>
             </div>
           </div>
@@ -144,11 +150,11 @@ const Navbar = () => {
           <div className="mx-auto px-6 py-5 xl:px-30">
             <div className="space-y-1">
               <Link
-                href="/programs"
+                href="/"
                 onClick={closeMobileMenu}
                 className="block px-4 py-3 text-sm font-medium text-slate-800 transition hover:bg-slate-50 hover:text-[#A41034]"
               >
-                Programs
+                Home
               </Link>
 
               <Link
@@ -189,6 +195,13 @@ const Navbar = () => {
                 className="block px-4 py-3 text-sm font-medium text-slate-800 transition hover:bg-slate-50 hover:text-[#A41034]"
               >
                 About
+              </Link>
+              <Link
+                href="/blogs"
+                onClick={closeMobileMenu}
+                className="block px-4 py-3 text-sm font-medium text-slate-800 transition hover:bg-slate-50 hover:text-[#A41034]"
+              >
+                Blogs
               </Link>
             </div>
 

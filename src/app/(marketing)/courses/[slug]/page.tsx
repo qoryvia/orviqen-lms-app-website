@@ -7,18 +7,18 @@ import Footer from "@/components/navigations/Footer";
 
 import { courses } from "@/components/courses/data/coursesData";
 
-import CourseDetailHero from "@/components/courses/detailPage/CourseDetailHero";
-import CourseOverview from "@/components/courses/detailPage/CourseOverview";
-import CourseHighlights from "@/components/courses/detailPage/CourseHighlights";
-import CourseLearning from "@/components/courses/detailPage/CourseLearning";
-import CourseCurriculum from "@/components/courses/detailPage/CourseCurriculum";
-import CourseProjects from "@/components/courses/detailPage/CourseProjects";
-import CourseCareer from "@/components/courses/detailPage/CourseCareer";
-import CoursePrerequisites from "@/components/courses/detailPage/CoursePrerequisites";
-import CourseTools from "@/components/courses/detailPage/CourseTools";
-import CourseFAQ from "@/components/courses/detailPage/CourseFAQ";
-import RelatedCourses from "@/components/courses/detailPage/RelatedCourses";
-import CourseCTA from "@/components/courses/detailPage/CourseCTA";
+import CourseDetailHero from "@/components/courses/courseDetail/CourseDetailHero";
+import CourseOverview from "@/components/courses/courseDetail/CourseOverview";
+import CourseHighlights from "@/components/courses/courseDetail/CourseHighlights";
+import CourseLearning from "@/components/courses/courseDetail/CourseLearning";
+import CourseCurriculum from "@/components/courses/courseDetail/CourseCurriculum";
+import CourseProjects from "@/components/courses/courseDetail/CourseProjects";
+import CourseCareer from "@/components/courses/courseDetail/CourseCareer";
+import CoursePrerequisites from "@/components/courses/courseDetail/CoursePrerequisites";
+import CourseTools from "@/components/courses/courseDetail/CourseTools";
+import CourseFAQ from "@/components/courses/courseDetail/CourseFAQ";
+import RelatedCourses from "@/components/courses/courseDetail/RelatedCourses";
+import CourseCTA from "@/components/courses/courseDetail/CourseCTA";
 
 interface CoursePageProps {
   params: Promise<{
