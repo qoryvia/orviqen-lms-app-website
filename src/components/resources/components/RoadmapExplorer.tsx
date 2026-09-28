@@ -29,10 +29,7 @@ import {
 
 const ROADMAPS_PER_PAGE = 8;
 
-const ROADMAP_ICONS: Record<
-  string,
-  React.ComponentType<{ size?: number }>
-> = {
+const ROADMAP_ICONS: Record<string, React.ComponentType<{ size?: number }>> = {
   code: FiCode,
   server: FiServer,
   layers: FiLayers,
@@ -56,65 +53,51 @@ const levels: Array<RoadmapLevel | "All"> = [
 ];
 
 const RoadmapExplorer = () => {
-  const [selectedCategory, setSelectedCategory] =
-    useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const [selectedLevel, setSelectedLevel] =
-    useState<RoadmapLevel | "All">("All");
+  const [selectedLevel, setSelectedLevel] = useState<RoadmapLevel | "All">(
+    "All",
+  );
 
-  const [selectedRoadmapId, setSelectedRoadmapId] =
-    useState(roadmaps[0]?.id || "");
+  const [selectedRoadmapId, setSelectedRoadmapId] = useState(
+    roadmaps[0]?.id || "",
+  );
 
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredRoadmaps = useMemo(() => {
     return roadmaps.filter((roadmap) => {
       const matchesCategory =
-        selectedCategory === "All" ||
-        roadmap.category === selectedCategory;
+        selectedCategory === "All" || roadmap.category === selectedCategory;
 
       const matchesLevel =
-        selectedLevel === "All" ||
-        roadmap.level.includes(selectedLevel);
+        selectedLevel === "All" || roadmap.level.includes(selectedLevel);
 
       return matchesCategory && matchesLevel;
     });
   }, [selectedCategory, selectedLevel]);
 
-  const totalPages = Math.ceil(
-    filteredRoadmaps.length / ROADMAPS_PER_PAGE
-  );
+  const totalPages = Math.ceil(filteredRoadmaps.length / ROADMAPS_PER_PAGE);
 
   const safeCurrentPage =
-    totalPages > 0
-      ? Math.min(currentPage, totalPages)
-      : 1;
+    totalPages > 0 ? Math.min(currentPage, totalPages) : 1;
 
   const visibleRoadmaps = useMemo(() => {
-    const startIndex =
-      (safeCurrentPage - 1) * ROADMAPS_PER_PAGE;
+    const startIndex = (safeCurrentPage - 1) * ROADMAPS_PER_PAGE;
 
-    return filteredRoadmaps.slice(
-      startIndex,
-      startIndex + ROADMAPS_PER_PAGE
-    );
+    return filteredRoadmaps.slice(startIndex, startIndex + ROADMAPS_PER_PAGE);
   }, [filteredRoadmaps, safeCurrentPage]);
 
   const selectedRoadmap =
-    filteredRoadmaps.find(
-      (roadmap) => roadmap.id === selectedRoadmapId
-    ) || filteredRoadmaps[0];
+    filteredRoadmaps.find((roadmap) => roadmap.id === selectedRoadmapId) ||
+    filteredRoadmaps[0];
 
-  const handleCategoryChange = (
-    category: string
-  ) => {
+  const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
     setCurrentPage(1);
 
     const nextRoadmap = roadmaps.find(
-      (roadmap) =>
-        category === "All" ||
-        roadmap.category === category
+      (roadmap) => category === "All" || roadmap.category === category,
     );
 
     if (nextRoadmap) {
@@ -122,18 +105,14 @@ const RoadmapExplorer = () => {
     }
   };
 
-  const handleLevelChange = (
-    level: RoadmapLevel | "All"
-  ) => {
+  const handleLevelChange = (level: RoadmapLevel | "All") => {
     setSelectedLevel(level);
     setCurrentPage(1);
 
     const nextRoadmap = roadmaps.find(
       (roadmap) =>
-        (selectedCategory === "All" ||
-          roadmap.category === selectedCategory) &&
-        (level === "All" ||
-          roadmap.level.includes(level))
+        (selectedCategory === "All" || roadmap.category === selectedCategory) &&
+        (level === "All" || roadmap.level.includes(level)),
     );
 
     if (nextRoadmap) {
@@ -141,21 +120,15 @@ const RoadmapExplorer = () => {
     }
   };
 
-  const handleRoadmapSelect = (
-    roadmapId: string
-  ) => {
+  const handleRoadmapSelect = (roadmapId: string) => {
     setSelectedRoadmapId(roadmapId);
 
-    const roadmapIndex =
-      filteredRoadmaps.findIndex(
-        (roadmap) => roadmap.id === roadmapId
-      );
+    const roadmapIndex = filteredRoadmaps.findIndex(
+      (roadmap) => roadmap.id === roadmapId,
+    );
 
     if (roadmapIndex !== -1) {
-      const nextPage =
-        Math.floor(
-          roadmapIndex / ROADMAPS_PER_PAGE
-        ) + 1;
+      const nextPage = Math.floor(roadmapIndex / ROADMAPS_PER_PAGE) + 1;
 
       setCurrentPage(nextPage);
     }
@@ -168,21 +141,16 @@ const RoadmapExplorer = () => {
 
     setCurrentPage(page);
 
-    const firstRoadmap =
-      filteredRoadmaps[
-        (page - 1) * ROADMAPS_PER_PAGE
-      ];
+    const firstRoadmap = filteredRoadmaps[(page - 1) * ROADMAPS_PER_PAGE];
 
     if (firstRoadmap) {
       setSelectedRoadmapId(firstRoadmap.id);
     }
 
-    document
-      .getElementById("roadmap-explorer")
-      ?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    document.getElementById("roadmap-explorer")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (
@@ -203,8 +171,8 @@ const RoadmapExplorer = () => {
             </h2>
 
             <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
-              Filter the roadmap library by domain and experience level,
-              then open a roadmap to see the complete learning journey.
+              Filter the roadmap library by domain and experience level, then
+              open a roadmap to see the complete learning journey.
             </p>
           </div>
 
@@ -243,7 +211,7 @@ const RoadmapExplorer = () => {
                       key={category}
                       type="button"
                       onClick={() => handleCategoryChange(category)}
-                      className={`min-w-0 w-full break-words border px-3 py-2.5 text-xs font-semibold transition-colors sm:px-4 ${
+                      className={`min-w-0 border px-3 py-2 text-xs font-semibold transition-colors sm:px-4 lg:w-auto lg:shrink-0 ${
                         active
                           ? "border-[#A41034] bg-[#A41034] text-white"
                           : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
@@ -296,141 +264,116 @@ const RoadmapExplorer = () => {
         {visibleRoadmaps.length > 0 ? (
           <>
             <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {visibleRoadmaps.map(
-                (roadmap) => {
-                  const Icon =
-                    ROADMAP_ICONS[
-                      roadmap.icon
-                    ] || FiMap;
+              {visibleRoadmaps.map((roadmap) => {
+                const Icon = ROADMAP_ICONS[roadmap.icon] || FiMap;
 
-                  const active =
-                    selectedRoadmap?.id ===
-                    roadmap.id;
+                const active = selectedRoadmap?.id === roadmap.id;
 
-                  return (
-                    <article
-                      key={roadmap.id}
-                      className={`group relative overflow-hidden border bg-white transition-all duration-300 ${
-                        active
-                          ? "border-[#A41034] shadow-lg shadow-[#A41034]/5"
-                          : "border-slate-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/50"
+                return (
+                  <article
+                    key={roadmap.id}
+                    className={`group relative overflow-hidden border bg-white transition-all duration-300 ${
+                      active
+                        ? "border-[#A41034] shadow-lg shadow-[#A41034]/5"
+                        : "border-slate-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/50"
+                    }`}
+                  >
+                    {/* Top accent */}
+                    <div
+                      className={`h-1 w-full ${
+                        active ? "bg-[#A41034]" : "bg-slate-100"
                       }`}
-                    >
-                      {/* Top accent */}
-                      <div
-                        className={`h-1 w-full ${
-                          active
-                            ? "bg-[#A41034]"
-                            : "bg-slate-100"
-                        }`}
-                      />
+                    />
 
-                      <div className="p-5">
-                        <div className="flex items-start justify-between gap-4">
-                          <div
-                            className={`flex h-11 w-11 items-center justify-center ${
-                              active
-                                ? "bg-[#A41034] text-white"
-                                : "bg-slate-50 text-[#A41034]"
-                            }`}
-                          >
-                            <Icon size={19} />
-                          </div>
-
-                          <span className="border border-slate-200 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-400">
-                            {roadmap.steps.length} Steps
-                          </span>
-                        </div>
-
-                        <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.13em] text-[#A41034]">
-                          {roadmap.category}
-                        </p>
-
-                        <h3 className="mt-2 text-lg font-semibold tracking-tight text-slate-950">
-                          {roadmap.title}
-                        </h3>
-
-                        <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-500">
-                          {roadmap.description}
-                        </p>
-
-                        <div className="mt-5 grid grid-cols-2 gap-2">
-                          <div className="border border-slate-100 bg-slate-50 p-3">
-                            <p className="text-[10px] uppercase tracking-[0.08em] text-slate-400">
-                              Duration
-                            </p>
-
-                            <div className="mt-1 flex items-center gap-1.5">
-                              <FiClock
-                                size={12}
-                                className="text-[#A41034]"
-                              />
-
-                              <span className="text-xs font-semibold text-slate-700">
-                                {roadmap.estimatedDuration}
-                              </span>
-                            </div>
-                          </div>
-
-                          <div className="border border-slate-100 bg-slate-50 p-3">
-                            <p className="text-[10px] uppercase tracking-[0.08em] text-slate-400">
-                              Level
-                            </p>
-
-                            <span className="mt-1 block truncate text-xs font-semibold text-slate-700">
-                              {roadmap.level.join(" / ")}
-                            </span>
-                          </div>
-                        </div>
-
-                        <div className="mt-5 flex flex-wrap gap-1.5">
-                          {roadmap.technologies
-                            .slice(0, 4)
-                            .map(
-                              (technology) => (
-                                <span
-                                  key={technology}
-                                  className="bg-slate-50 px-2 py-1 text-[10px] font-medium text-slate-500"
-                                >
-                                  {technology}
-                                </span>
-                              )
-                            )}
-
-                          {roadmap.technologies.length >
-                            4 && (
-                            <span className="bg-slate-50 px-2 py-1 text-[10px] font-medium text-slate-400">
-                              +
-                              {roadmap.technologies.length -
-                                4}
-                            </span>
-                          )}
-                        </div>
-
-                        <button
-                          type="button"
-                          onClick={() =>
-                            handleRoadmapSelect(
-                              roadmap.id
-                            )
-                          }
-                          className={`mt-6 inline-flex w-full items-center justify-center gap-2 px-4 py-3 text-xs font-semibold transition-colors ${
+                    <div className="p-5">
+                      <div className="flex items-start justify-between gap-4">
+                        <div
+                          className={`flex h-11 w-11 items-center justify-center ${
                             active
-                              ? "bg-[#A41034] text-white hover:bg-[#8f0e2d]"
-                              : "border border-slate-200 bg-white text-slate-700 hover:border-[#A41034] hover:text-[#A41034]"
+                              ? "bg-[#A41034] text-white"
+                              : "bg-slate-50 text-[#A41034]"
                           }`}
                         >
-                          {active
-                            ? "Roadmap Selected"
-                            : "View Roadmap"}
+                          <Icon size={19} />
+                        </div>
 
-                          <FiArrowRight size={14} />
-                        </button>
+                        <span className="border border-slate-200 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-400">
+                          {roadmap.steps.length} Steps
+                        </span>
                       </div>
-                    </article>
-                  );
-                }
-              )}
+
+                      <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.13em] text-[#A41034]">
+                        {roadmap.category}
+                      </p>
+
+                      <h3 className="mt-2 text-lg font-semibold tracking-tight text-slate-950">
+                        {roadmap.title}
+                      </h3>
+
+                      <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-500">
+                        {roadmap.description}
+                      </p>
+
+                      <div className="mt-5 grid grid-cols-2 gap-2">
+                        <div className="border border-slate-100 bg-slate-50 p-3">
+                          <p className="text-[10px] uppercase tracking-[0.08em] text-slate-400">
+                            Duration
+                          </p>
+
+                          <div className="mt-1 flex items-center gap-1.5">
+                            <FiClock size={12} className="text-[#A41034]" />
+
+                            <span className="text-xs font-semibold text-slate-700">
+                              {roadmap.estimatedDuration}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="border border-slate-100 bg-slate-50 p-3">
+                          <p className="text-[10px] uppercase tracking-[0.08em] text-slate-400">
+                            Level
+                          </p>
+
+                          <span className="mt-1 block truncate text-xs font-semibold text-slate-700">
+                            {roadmap.level.join(" / ")}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="mt-5 flex flex-wrap gap-1.5">
+                        {roadmap.technologies.slice(0, 4).map((technology) => (
+                          <span
+                            key={technology}
+                            className="bg-slate-50 px-2 py-1 text-[10px] font-medium text-slate-500"
+                          >
+                            {technology}
+                          </span>
+                        ))}
+
+                        {roadmap.technologies.length > 4 && (
+                          <span className="bg-slate-50 px-2 py-1 text-[10px] font-medium text-slate-400">
+                            +{roadmap.technologies.length - 4}
+                          </span>
+                        )}
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => handleRoadmapSelect(roadmap.id)}
+                        className={`mt-6 inline-flex w-full items-center justify-center gap-2 px-4 py-3 text-xs font-semibold transition-colors ${
+                          active
+                            ? "bg-[#A41034] text-white hover:bg-[#8f0e2d]"
+                            : "border border-slate-200 bg-white text-slate-700 hover:border-[#A41034] hover:text-[#A41034]"
+                        }`}
+                      >
+                        {active ? "Roadmap Selected" : "View Roadmap"}
+
+                        <FiArrowRight size={14} />
+                      </button>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
 
             {/* Pagination */}
@@ -439,16 +382,13 @@ const RoadmapExplorer = () => {
                 <p className="text-xs text-slate-500">
                   Showing{" "}
                   <span className="font-semibold text-slate-700">
-                    {(safeCurrentPage - 1) *
-                      ROADMAPS_PER_PAGE +
-                      1}
+                    {(safeCurrentPage - 1) * ROADMAPS_PER_PAGE + 1}
                   </span>{" "}
                   –{" "}
                   <span className="font-semibold text-slate-700">
                     {Math.min(
-                      safeCurrentPage *
-                        ROADMAPS_PER_PAGE,
-                      filteredRoadmaps.length
+                      safeCurrentPage * ROADMAPS_PER_PAGE,
+                      filteredRoadmaps.length,
                     )}
                   </span>{" "}
                   of{" "}
@@ -461,14 +401,8 @@ const RoadmapExplorer = () => {
                 <div className="flex items-center gap-1.5">
                   <button
                     type="button"
-                    onClick={() =>
-                      changePage(
-                        safeCurrentPage - 1
-                      )
-                    }
-                    disabled={
-                      safeCurrentPage === 1
-                    }
+                    onClick={() => changePage(safeCurrentPage - 1)}
+                    disabled={safeCurrentPage === 1}
                     aria-label="Previous page"
                     className="inline-flex h-9 w-9 items-center justify-center border border-slate-200 bg-white text-slate-600 transition-colors hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
                   >
@@ -479,23 +413,16 @@ const RoadmapExplorer = () => {
                     {
                       length: totalPages,
                     },
-                    (_, index) => index + 1
+                    (_, index) => index + 1,
                   ).map((page) => {
-                    const active =
-                      page === safeCurrentPage;
+                    const active = page === safeCurrentPage;
 
                     return (
                       <button
                         key={page}
                         type="button"
-                        onClick={() =>
-                          changePage(page)
-                        }
-                        aria-current={
-                          active
-                            ? "page"
-                            : undefined
-                        }
+                        onClick={() => changePage(page)}
+                        aria-current={active ? "page" : undefined}
                         className={`inline-flex h-9 min-w-9 items-center justify-center border px-3 text-xs font-semibold transition-colors ${
                           active
                             ? "border-[#A41034] bg-[#A41034] text-white"
@@ -509,15 +436,8 @@ const RoadmapExplorer = () => {
 
                   <button
                     type="button"
-                    onClick={() =>
-                      changePage(
-                        safeCurrentPage + 1
-                      )
-                    }
-                    disabled={
-                      safeCurrentPage ===
-                      totalPages
-                    }
+                    onClick={() => changePage(safeCurrentPage + 1)}
+                    disabled={safeCurrentPage === totalPages}
                     aria-label="Next page"
                     className="inline-flex h-9 w-9 items-center justify-center border border-slate-200 bg-white text-slate-600 transition-colors hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
                   >
@@ -529,10 +449,7 @@ const RoadmapExplorer = () => {
           </>
         ) : (
           <div className="mt-8 border border-slate-200 bg-slate-50 px-6 py-16 text-center">
-            <FiMap
-              size={28}
-              className="mx-auto text-slate-300"
-            />
+            <FiMap size={28} className="mx-auto text-slate-300" />
 
             <h3 className="mt-4 text-xl font-semibold text-slate-950">
               No roadmaps match your filters.
@@ -610,157 +527,127 @@ const RoadmapExplorer = () => {
               {/* Visual Step Flow */}
               <div className="mt-8 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 <div className="flex min-w-[720px] items-start">
-                  {selectedRoadmap.steps.map(
-                    (step, index) => {
-                      const isLast =
-                        index ===
-                        selectedRoadmap.steps.length -
-                          1;
+                  {selectedRoadmap.steps.map((step, index) => {
+                    const isLast = index === selectedRoadmap.steps.length - 1;
 
-                      return (
-                        <div
-                          key={step.id}
-                          className="flex flex-1 items-start"
-                        >
-                          <div className="min-w-0 flex-1 text-center">
-                            <div className="mx-auto flex h-12 w-12 items-center justify-center border-2 border-[#A41034] bg-[#A41034]/5 text-sm font-bold text-[#A41034]">
-                              {String(
-                                step.step
-                              ).padStart(
-                                2,
-                                "0"
-                              )}
-                            </div>
-
-                            <p className="mx-auto mt-3 max-w-[130px] text-xs font-semibold leading-5 text-slate-700">
-                              {step.title}
-                            </p>
+                    return (
+                      <div key={step.id} className="flex flex-1 items-start">
+                        <div className="min-w-0 flex-1 text-center">
+                          <div className="mx-auto flex h-12 w-12 items-center justify-center border-2 border-[#A41034] bg-[#A41034]/5 text-sm font-bold text-[#A41034]">
+                            {String(step.step).padStart(2, "0")}
                           </div>
 
-                          {!isLast && (
-                            <div className="mt-6 h-px flex-1 bg-slate-200" />
-                          )}
+                          <p className="mx-auto mt-3 max-w-[130px] text-xs font-semibold leading-5 text-slate-700">
+                            {step.title}
+                          </p>
                         </div>
-                      );
-                    }
-                  )}
+
+                        {!isLast && (
+                          <div className="mt-6 h-px flex-1 bg-slate-200" />
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
 
             {/* Detailed Journey */}
             <div className="divide-y divide-slate-200">
-              {selectedRoadmap.steps.map(
-                (step, index) => (
-                  <div
-                    key={step.id}
-                    className="grid gap-7 px-6 py-7 sm:px-8 lg:grid-cols-[100px_minmax(0,1fr)_280px] lg:px-10"
-                  >
-                    {/* Number */}
-                    <div className="flex items-start gap-4 lg:block">
-                      <div className="flex h-12 w-12 items-center justify-center bg-[#A41034] text-sm font-bold text-white">
-                        {String(
-                          step.step
-                        ).padStart(2, "0")}
-                      </div>
-
-                      <div className="lg:mt-4">
-                        <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-                          Stage
-                        </p>
-
-                        <p className="mt-1 text-sm font-semibold text-slate-700">
-                          {index + 1} /{" "}
-                          {
-                            selectedRoadmap
-                              .steps.length
-                          }
-                        </p>
-                      </div>
+              {selectedRoadmap.steps.map((step, index) => (
+                <div
+                  key={step.id}
+                  className="grid gap-7 px-6 py-7 sm:px-8 lg:grid-cols-[100px_minmax(0,1fr)_280px] lg:px-10"
+                >
+                  {/* Number */}
+                  <div className="flex items-start gap-4 lg:block">
+                    <div className="flex h-12 w-12 items-center justify-center bg-[#A41034] text-sm font-bold text-white">
+                      {String(step.step).padStart(2, "0")}
                     </div>
 
-                    {/* Main Content */}
-                    <div>
-                      <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
-                        <div>
-                          <h5 className="text-xl font-semibold tracking-tight text-slate-950">
-                            {step.title}
-                          </h5>
-
-                          <div className="mt-2 inline-flex items-center gap-1.5 text-xs text-slate-400">
-                            <FiClock size={12} />
-                            {step.duration}
-                          </div>
-                        </div>
-                      </div>
-
-                      <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
-                        {step.description}
+                    <div className="lg:mt-4">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
+                        Stage
                       </p>
 
-                      <div className="mt-5">
-                        <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-                          Skills
-                        </p>
-
-                        <div className="mt-2 flex flex-wrap gap-2">
-                          {step.skills.map(
-                            (skill) => (
-                              <span
-                                key={skill}
-                                className="border border-slate-200 bg-white px-2.5 py-1.5 text-[11px] font-medium text-slate-600"
-                              >
-                                {skill}
-                              </span>
-                            )
-                          )}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Resources / Project */}
-                    <div className="border border-slate-200 bg-slate-50 p-5">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#A41034]">
-                        Focus
+                      <p className="mt-1 text-sm font-semibold text-slate-700">
+                        {index + 1} / {selectedRoadmap.steps.length}
                       </p>
-
-                      <div className="mt-3 space-y-2.5">
-                        {step.resources
-                          .slice(0, 4)
-                          .map(
-                            (resource) => (
-                              <div
-                                key={resource}
-                                className="flex items-start gap-2"
-                              >
-                                <FiCheck
-                                  size={13}
-                                  className="mt-1 shrink-0 text-[#A41034]"
-                                />
-
-                                <span className="text-xs leading-5 text-slate-600">
-                                  {resource}
-                                </span>
-                              </div>
-                            )
-                          )}
-                      </div>
-
-                      {step.project && (
-                        <div className="mt-5 border-t border-slate-200 pt-4">
-                          <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#A41034]">
-                            Build
-                          </p>
-
-                          <p className="mt-1 text-sm font-semibold leading-6 text-slate-800">
-                            {step.project}
-                          </p>
-                        </div>
-                      )}
                     </div>
                   </div>
-                )
-              )}
+
+                  {/* Main Content */}
+                  <div>
+                    <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+                      <div>
+                        <h5 className="text-xl font-semibold tracking-tight text-slate-950">
+                          {step.title}
+                        </h5>
+
+                        <div className="mt-2 inline-flex items-center gap-1.5 text-xs text-slate-400">
+                          <FiClock size={12} />
+                          {step.duration}
+                        </div>
+                      </div>
+                    </div>
+
+                    <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
+                      {step.description}
+                    </p>
+
+                    <div className="mt-5">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
+                        Skills
+                      </p>
+
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {step.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="border border-slate-200 bg-white px-2.5 py-1.5 text-[11px] font-medium text-slate-600"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Resources / Project */}
+                  <div className="border border-slate-200 bg-slate-50 p-5">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#A41034]">
+                      Focus
+                    </p>
+
+                    <div className="mt-3 space-y-2.5">
+                      {step.resources.slice(0, 4).map((resource) => (
+                        <div key={resource} className="flex items-start gap-2">
+                          <FiCheck
+                            size={13}
+                            className="mt-1 shrink-0 text-[#A41034]"
+                          />
+
+                          <span className="text-xs leading-5 text-slate-600">
+                            {resource}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {step.project && (
+                      <div className="mt-5 border-t border-slate-200 pt-4">
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#A41034]">
+                          Build
+                        </p>
+
+                        <p className="mt-1 text-sm font-semibold leading-6 text-slate-800">
+                          {step.project}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         )}

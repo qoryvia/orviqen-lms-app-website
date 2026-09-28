@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import React from "react";
 
 import "./globals.css";
+import { AppProvider } from "@/context/AppContext";
+import ChatAssistantController from "@/components/chatassistant/components/ChatAssistantController";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,16 +18,13 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default:
-      "Orviqen | Learn Technology, Build Skills, Shape Your Future",
+    default: "Orviqen | Learn Technology, Build Skills, Shape Your Future",
     template: "%s | Orviqen",
   },
 
@@ -70,8 +69,7 @@ export const metadata: Metadata = {
 
   category: "education",
 
-  classification:
-    "Education, Online Learning, Technology",
+  classification: "Education, Online Learning, Technology",
 
   referrer: "origin-when-cross-origin",
 
@@ -117,8 +115,7 @@ export const metadata: Metadata = {
     siteName: "Orviqen",
     url: siteUrl,
 
-    title:
-      "Orviqen | Learn Technology, Build Skills, Shape Your Future",
+    title: "Orviqen | Learn Technology, Build Skills, Shape Your Future",
 
     description:
       "Explore practical learning paths across software development, AI, machine learning, data, cybersecurity, cloud and programming.",
@@ -128,8 +125,7 @@ export const metadata: Metadata = {
         url: "/og/default.jpg",
         width: 1200,
         height: 630,
-        alt:
-          "Orviqen — Learn Technology, Build Skills, Shape Your Future",
+        alt: "Orviqen — Learn Technology, Build Skills, Shape Your Future",
       },
     ],
   },
@@ -137,8 +133,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "Orviqen | Learn Technology, Build Skills, Shape Your Future",
+    title: "Orviqen | Learn Technology, Build Skills, Shape Your Future",
 
     description:
       "Explore practical courses and learning resources across modern technology.",
@@ -190,7 +185,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
       <body className="min-h-screen bg-white font-sans text-slate-950">
-        {children}
+        <AppProvider>
+          {children}
+          <ChatAssistantController />
+        </AppProvider>
       </body>
     </html>
   );
