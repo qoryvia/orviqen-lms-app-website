@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import faviconlogo from "../../assets/logos/favicon.png"
 import {
   FiArrowRight,
   FiArrowUpRight,
@@ -7,6 +8,7 @@ import {
   FiMapPin,
   FiPhone,
 } from "react-icons/fi";
+import Image from "next/image";
 
 const CRIMSON = "#A41034";
 
@@ -41,15 +43,9 @@ const Footer = () => {
           <div className="max-w-md">
             <Link href="/" className="inline-flex items-center gap-3">
               {/* Institutional Monogram */}
-              <div
-                className="flex h-11 w-11 items-center justify-center border-2 font-serif text-[15px] font-bold tracking-tight text-white"
-                style={{
-                  backgroundColor: CRIMSON,
-                  borderColor: CRIMSON,
-                }}
-              >
-                HC
-              </div>
+            <div className="flex h-11 w-11 items-center justify-center">
+                <Image src={faviconlogo} alt="henley crest logo"/>
+            </div>
 
               {/* Wordmark */}
               <div className="leading-none">
@@ -120,7 +116,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="tel:+919999999999"
+            href="tel:+917800777099"
             className="flex items-center gap-3 text-sm text-white/55 transition-colors hover:text-white"
           >
             <FiPhone
@@ -128,7 +124,7 @@ const Footer = () => {
               className="shrink-0"
               style={{ color: CRIMSON }}
             />
-            +91 99999 99999
+            +91 7800777099
           </a>
 
           <div className="flex items-center gap-3 text-sm text-white/55">

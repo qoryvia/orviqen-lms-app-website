@@ -106,7 +106,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "4–6 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
     description:
       "Build modern, responsive and accessible web interfaces using HTML, CSS, JavaScript, React, Next.js and modern frontend engineering practices.",
     shortDescription:
@@ -357,7 +357,7 @@ export const courses: Course[] = [
     level: "Intermediate to Advanced",
     duration: "4–6 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn backend engineering using Node.js, Express, REST APIs, authentication, databases, caching, testing and deployment.",
@@ -603,7 +603,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "6–9 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Become a full stack developer by learning frontend, backend, databases, authentication, APIs, testing, Git, deployment and cloud fundamentals.",
@@ -894,7 +894,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "3–5 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn Python programming from fundamentals to object-oriented programming, automation, APIs, data handling and advanced Python development.",
@@ -1105,7 +1105,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "4–6 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn Java programming, object-oriented programming, collections, exception handling, SQL, Spring Boot and backend application development.",
@@ -1325,7 +1325,7 @@ export const courses: Course[] = [
     level: "Intermediate to Advanced",
     duration: "2–4 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn TypeScript for scalable frontend and backend applications with strong typing, interfaces, generics and modern application architecture.",
@@ -1534,7 +1534,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "4–6 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Master data structures, algorithms, problem solving and coding interview patterns using multiple programming languages.",
@@ -1773,7 +1773,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "4–6 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn modern C++ programming and solve data structures and algorithm problems for competitive programming and technical interviews.",
@@ -1960,7 +1960,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "4–6 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Master Java programming, collections, object-oriented programming and data structures and algorithms for technical interviews.",
@@ -2146,7 +2146,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "4–6 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn Python programming and master data structures, algorithms and problem-solving techniques for software engineering interviews.",
@@ -2326,7 +2326,7 @@ export const courses: Course[] = [
     level: "Intermediate to Advanced",
     duration: "5–8 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn machine learning, deep learning, NLP, computer vision and modern AI application development using Python and popular AI frameworks.",
@@ -2572,7 +2572,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "5–8 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn Python, statistics, data analysis, visualization, machine learning and predictive modeling through practical projects.",
@@ -2783,7 +2783,7 @@ export const courses: Course[] = [
     level: "Beginner to Job Ready",
     duration: "4–6 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn Excel, SQL, Python, data visualization, Power BI and business analytics through practical business datasets.",
@@ -2996,7 +2996,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "5–8 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn networking, Linux, security fundamentals, application security, monitoring, incident response and secure development practices.",
@@ -3201,7 +3201,7 @@ export const courses: Course[] = [
     level: "Intermediate to Advanced",
     duration: "4–7 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn ethical security testing, reconnaissance, vulnerability assessment, web application security and penetration testing in authorized lab environments.",
@@ -3422,7 +3422,7 @@ export const courses: Course[] = [
     level: "Beginner to Advanced",
     duration: "4–6 Months",
     mode: "Online",
-    language: ["English"],
+    language: ["Hindi"],
 
     description:
       "Learn Linux, cloud infrastructure, Docker, CI/CD, deployment automation, monitoring and modern DevOps practices.",

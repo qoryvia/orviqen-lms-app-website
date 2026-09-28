@@ -7,9 +7,7 @@ interface CourseOverviewProps {
   course: Course;
 }
 
-const CourseOverview = ({
-  course,
-}: CourseOverviewProps) => {
+const CourseOverview = ({ course }: CourseOverviewProps) => {
   return (
     <section>
       <div className="flex items-end justify-between gap-6">
@@ -51,8 +49,7 @@ const CourseOverview = ({
           },
           {
             label: "Language",
-            value:
-              course.language?.join(", ") || "English",
+            value: course.language?.join(", ") || "Hindi",
           },
         ].map((item) => (
           <div

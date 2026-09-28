@@ -281,10 +281,10 @@ export const studyFAQs = [
   {
     question: "What documents are usually required?",
     answer:
-      "Requirements vary by university and country, but commonly include academic records, identification documents, English-language test results where applicable and application-specific materials.",
+      "Requirements vary by university and country, but commonly include academic records, identification documents, Hindi-language test results where applicable and application-specific materials.",
   },
   {
-    question: "Do I need an English-language test?",
+    question: "Do I need an Hindi-language test?",
     answer:
       "Requirements depend on the university, program and country. Some institutions may accept alternative evidence or offer waivers under specific conditions.",
   },

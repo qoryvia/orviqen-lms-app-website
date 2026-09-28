@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import faviconlogo from "../../assets/logos/favicon.png"
 import {
   FiArrowRight,
   FiChevronDown,
@@ -9,6 +10,7 @@ import {
   FiPhone,
   FiX,
 } from "react-icons/fi";
+import Image from "next/image";
 
 const CRIMSON = "#A41034";
 
@@ -30,7 +32,7 @@ const Navbar = () => {
             className="group flex items-center gap-3"
           >
             {/* Institutional Monogram */}
-            <div
+            {/* <div
               className="flex h-11 w-11 items-center justify-center border-2 font-serif text-[15px] font-bold tracking-tight text-white"
               style={{
                 backgroundColor: CRIMSON,
@@ -38,6 +40,9 @@ const Navbar = () => {
               }}
             >
               HC
+            </div> */}
+            <div className="flex h-11 w-11 items-center justify-center">
+                <Image src={faviconlogo} alt="henley logo image"/>
             </div>
 
             {/* Wordmark */}

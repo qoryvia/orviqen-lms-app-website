@@ -1,0 +1,59 @@
+# Orviqen
+
+> Orviqen is a modern learning platform focused on software development, artificial intelligence, machine learning, data, cybersecurity, cloud, programming and technology careers.
+
+## Website
+
+- [Home](https://your-domain.com/): Orviqen homepage and learning platform overview.
+- [Courses](https://your-domain.com/courses): Explore Orviqen learning programs and technical courses.
+- [Blogs](https://your-domain.com/blogs): Technology, learning, career and software development articles.
+- [About](https://your-domain.com/about): Information about Orviqen.
+- [Contact](https://your-domain.com/contact): Contact and enquiry information.
+
+## Courses
+
+Orviqen courses cover areas including:
+
+- Frontend Development
+- Backend Development
+- Full Stack Development
+- JavaScript
+- TypeScript
+- Python
+- Java
+- Data Structures & Algorithms
+- Data Science
+- Data Analytics
+- Artificial Intelligence
+- Machine Learning
+- Cybersecurity
+- Ethical Hacking
+- Cloud & DevOps
+
+## Blog Topics
+
+The Orviqen Journal includes content about:
+
+- Software Development
+- Frontend Engineering
+- Backend Engineering
+- Full Stack Development
+- Artificial Intelligence
+- Machine Learning
+- Cybersecurity
+- Data Analytics
+- Programming
+- Data Structures & Algorithms
+- Cloud & DevOps
+- Technical Careers
+- Learning Strategies
+
+## Content
+
+Orviqen content is intended to provide educational and practical information about modern technology, programming and professional learning.
+
+## Important URLs
+
+- [Courses](https://your-domain.com/courses)
+- [Blogs](https://your-domain.com/blogs)
+- [Contact](https://your-domain.com/contact)
