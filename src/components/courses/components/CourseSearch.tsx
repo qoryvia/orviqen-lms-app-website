@@ -3,6 +3,8 @@
 import React, { useMemo, useState } from "react";
 import {
   FiBookOpen,
+  FiChevronLeft,
+  FiChevronRight,
   FiSearch,
   FiSliders,
   FiX,
@@ -14,9 +16,13 @@ import {
   courses,
 } from "../data/coursesData";
 
+const COURSES_PER_PAGE = 10;
+
 const CourseSearch = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] =
+    useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredCourses = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -37,15 +43,63 @@ const CourseSearch = () => {
         .toLowerCase();
 
       const matchesSearch =
-        query.length === 0 || searchableText.includes(query);
+        query.length === 0 ||
+        searchableText.includes(query);
 
       return matchesCategory && matchesSearch;
     });
   }, [searchQuery, selectedCategory]);
 
+  const totalPages = Math.ceil(
+    filteredCourses.length / COURSES_PER_PAGE
+  );
+
+  const safeCurrentPage =
+    totalPages > 0
+      ? Math.min(currentPage, totalPages)
+      : 1;
+
+  const paginatedCourses = useMemo(() => {
+    const startIndex =
+      (safeCurrentPage - 1) * COURSES_PER_PAGE;
+
+    return filteredCourses.slice(
+      startIndex,
+      startIndex + COURSES_PER_PAGE
+    );
+  }, [filteredCourses, safeCurrentPage]);
+
+  const handleSearchChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setSearchQuery(event.target.value);
+    setCurrentPage(1);
+  };
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
+
   const clearFilters = () => {
     setSearchQuery("");
     setSelectedCategory("All");
+    setCurrentPage(1);
+  };
+
+  const goToPage = (page: number) => {
+    if (page < 1 || page > totalPages) {
+      return;
+    }
+
+    setCurrentPage(page);
+
+    document
+      .getElementById("courses")
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
   };
 
   return (
@@ -66,8 +120,9 @@ const CourseSearch = () => {
           </h2>
 
           <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
-            Search by course name, technology, skill or category to find a
-            learning path that fits your goals.
+            Search by course name, technology, skill or
+            category to find a learning path that fits your
+            goals.
           </p>
         </div>
 
@@ -82,7 +137,7 @@ const CourseSearch = () => {
             <input
               type="search"
               value={searchQuery}
-              onChange={(event) => setSearchQuery(event.target.value)}
+              onChange={handleSearchChange}
               placeholder="Search courses, skills or technologies..."
               className="w-full border border-slate-200 bg-white py-3.5 pl-11 pr-11 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-[#A41034]"
             />
@@ -90,7 +145,10 @@ const CourseSearch = () => {
             {searchQuery && (
               <button
                 type="button"
-                onClick={() => setSearchQuery("")}
+                onClick={() => {
+                  setSearchQuery("");
+                  setCurrentPage(1);
+                }}
                 aria-label="Clear search"
                 className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700"
               >
@@ -109,13 +167,16 @@ const CourseSearch = () => {
 
           <div className="flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {courseCategories.map((category) => {
-              const active = selectedCategory === category;
+              const active =
+                selectedCategory === category;
 
               return (
                 <button
                   key={category}
                   type="button"
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() =>
+                    handleCategoryChange(category)
+                  }
                   className={`shrink-0 border px-4 py-2 text-xs font-semibold transition-colors ${
                     active
                       ? "border-[#A41034] bg-[#A41034] text-white"
@@ -133,10 +194,14 @@ const CourseSearch = () => {
         <div className="mt-7 flex flex-col gap-3 border-b border-slate-200 pb-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm font-medium text-slate-700">
             {filteredCourses.length}{" "}
-            {filteredCourses.length === 1 ? "course" : "courses"} found
+            {filteredCourses.length === 1
+              ? "course"
+              : "courses"}{" "}
+            found
           </p>
 
-          {(searchQuery || selectedCategory !== "All") && (
+          {(searchQuery ||
+            selectedCategory !== "All") && (
             <button
               type="button"
               onClick={clearFilters}
@@ -149,10 +214,13 @@ const CourseSearch = () => {
         </div>
 
         {/* Courses */}
-        {filteredCourses.length > 0 ? (
+        {paginatedCourses.length > 0 ? (
           <div className="mt-6 flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 md:snap-none xl:grid-cols-4">
-            {filteredCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
+            {paginatedCourses.map((course) => (
+              <CourseCard
+                key={course.id}
+                course={course}
+              />
             ))}
           </div>
         ) : (
@@ -167,7 +235,8 @@ const CourseSearch = () => {
             </h3>
 
             <p className="mt-2 text-sm text-slate-500">
-              Try another keyword or choose a different category.
+              Try another keyword or choose a different
+              category.
             </p>
 
             <button
@@ -181,10 +250,95 @@ const CourseSearch = () => {
         )}
 
         {/* Mobile Hint */}
-        {filteredCourses.length > 0 && (
+        {paginatedCourses.length > 0 && (
           <p className="mt-3 text-xs text-slate-400 md:hidden">
             Swipe to explore courses →
           </p>
+        )}
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-6 sm:flex-row">
+            <p className="text-xs text-slate-500">
+              Showing{" "}
+              <span className="font-semibold text-slate-700">
+                {(safeCurrentPage - 1) *
+                  COURSES_PER_PAGE +
+                  1}
+              </span>{" "}
+              –{" "}
+              <span className="font-semibold text-slate-700">
+                {Math.min(
+                  safeCurrentPage *
+                    COURSES_PER_PAGE,
+                  filteredCourses.length
+                )}
+              </span>{" "}
+              of{" "}
+              <span className="font-semibold text-slate-700">
+                {filteredCourses.length}
+              </span>{" "}
+              courses
+            </p>
+
+            <div className="flex items-center gap-1.5">
+              {/* Previous */}
+              <button
+                type="button"
+                onClick={() =>
+                  goToPage(safeCurrentPage - 1)
+                }
+                disabled={safeCurrentPage === 1}
+                aria-label="Previous page"
+                className="inline-flex h-9 w-9 items-center justify-center border border-slate-200 bg-white text-slate-600 transition-colors hover:border-slate-300 hover:text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                <FiChevronLeft size={17} />
+              </button>
+
+              {/* Page Numbers */}
+              {Array.from(
+                { length: totalPages },
+                (_, index) => index + 1
+              ).map((page) => {
+                const active =
+                  safeCurrentPage === page;
+
+                return (
+                  <button
+                    key={page}
+                    type="button"
+                    onClick={() => goToPage(page)}
+                    aria-label={`Go to page ${page}`}
+                    aria-current={
+                      active ? "page" : undefined
+                    }
+                    className={`inline-flex h-9 min-w-9 items-center justify-center border px-3 text-xs font-semibold transition-colors ${
+                      active
+                        ? "border-[#A41034] bg-[#A41034] text-white"
+                        : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-950"
+                    }`}
+                  >
+                    {page}
+                  </button>
+                );
+              })}
+
+              {/* Next */}
+              <button
+                type="button"
+                onClick={() =>
+                  goToPage(safeCurrentPage + 1)
+                }
+                disabled={
+                  safeCurrentPage === totalPages
+                }
+                aria-label="Next page"
+                className="inline-flex h-9 w-9 items-center justify-center border border-slate-200 bg-white text-slate-600 transition-colors hover:border-slate-300 hover:text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                <FiChevronRight size={17} />
+              </button>
+            </div>
+          </div>
         )}
       </div>
     </section>

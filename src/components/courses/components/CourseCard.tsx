@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Link from "next/link";
 import {
@@ -6,16 +7,17 @@ import {
 } from "react-icons/fi";
 
 import type { Course } from "../data/coursesData";
+import { useRouter } from 'next/navigation'
 
 type CourseCardProps = {
   course: Course;
 };
 
 const CourseCard = ({ course }: CourseCardProps) => {
-  const Icon = course.icon;
+  const router = useRouter()
 
   return (
-    <article className="group flex w-[84vw] shrink-0 snap-start flex-col overflow-hidden border border-slate-200 bg-white sm:w-[380px] md:w-auto md:shrink">
+    <article onClick={() => router.push(`/courses/${course.slug}`)} className="group flex w-[84vw] shrink-0 snap-start flex-col overflow-hidden border border-slate-200 bg-white sm:w-[380px] md:w-auto md:shrink">
       {/* Image */}
       <div className="relative h-52 overflow-hidden">
         <img
@@ -30,10 +32,6 @@ const CourseCard = ({ course }: CourseCardProps) => {
           <span className="bg-white px-2.5 py-1 text-[11px] font-semibold text-slate-900">
             {course.category}
           </span>
-        </div>
-
-        <div className="absolute bottom-4 left-4 flex h-9 w-9 items-center justify-center bg-[#A41034] text-white">
-          <Icon size={17} />
         </div>
       </div>
 
