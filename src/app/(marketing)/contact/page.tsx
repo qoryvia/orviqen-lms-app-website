@@ -11,13 +11,13 @@ import ContactReasons from "@/components/contact/components/ContactReasons";
 import ContactFAQ from "@/components/contact/components/ContactFAQ";
 
 export const metadata: Metadata = {
-  title: "Contact Orviqen | Talk About Your Learning Journey",
+  title: "Contact Eklavya | Talk About Your Learning Journey",
   description:
-    "Contact Orviqen about courses, programs, admissions, student support, learning paths and partnerships.",
+    "Contact Eklavya about courses, programs, admissions, student support, learning paths and partnerships.",
   keywords: [
-    "Orviqen contact",
-    "contact Orviqen",
-    "Orviqen courses",
+    "Eklavya contact",
+    "contact Eklavya",
+    "Eklavya courses",
     "course enquiry",
     "student support",
     "learning programs",

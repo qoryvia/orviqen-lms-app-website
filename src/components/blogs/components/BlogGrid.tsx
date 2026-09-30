@@ -17,8 +17,7 @@ const BLOGS_PER_PAGE = 6;
 
 const BlogGrid = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] =
-    useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredBlogs = useMemo(() => {
@@ -26,8 +25,7 @@ const BlogGrid = () => {
 
     return blogs.filter((blog) => {
       const matchesCategory =
-        selectedCategory === "All" ||
-        blog.category === selectedCategory;
+        selectedCategory === "All" || blog.category === selectedCategory;
 
       const searchableText = [
         blog.title,
@@ -41,30 +39,21 @@ const BlogGrid = () => {
         .toLowerCase();
 
       const matchesSearch =
-        query.length === 0 ||
-        searchableText.includes(query);
+        query.length === 0 || searchableText.includes(query);
 
       return matchesCategory && matchesSearch;
     });
   }, [searchQuery, selectedCategory]);
 
-  const totalPages = Math.ceil(
-    filteredBlogs.length / BLOGS_PER_PAGE
-  );
+  const totalPages = Math.ceil(filteredBlogs.length / BLOGS_PER_PAGE);
 
   const safeCurrentPage =
-    totalPages > 0
-      ? Math.min(currentPage, totalPages)
-      : 1;
+    totalPages > 0 ? Math.min(currentPage, totalPages) : 1;
 
   const visibleBlogs = useMemo(() => {
-    const startIndex =
-      (safeCurrentPage - 1) * BLOGS_PER_PAGE;
+    const startIndex = (safeCurrentPage - 1) * BLOGS_PER_PAGE;
 
-    return filteredBlogs.slice(
-      startIndex,
-      startIndex + BLOGS_PER_PAGE
-    );
+    return filteredBlogs.slice(startIndex, startIndex + BLOGS_PER_PAGE);
   }, [filteredBlogs, safeCurrentPage]);
 
   const handleSearchChange = (value: string) => {
@@ -90,12 +79,10 @@ const BlogGrid = () => {
 
     setCurrentPage(page);
 
-    document
-      .getElementById("latest")
-      ?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    document.getElementById("latest")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (
@@ -123,9 +110,7 @@ const BlogGrid = () => {
 
           <p className="text-sm text-slate-500">
             {filteredBlogs.length}{" "}
-            {filteredBlogs.length === 1
-              ? "article"
-              : "articles"}
+            {filteredBlogs.length === 1 ? "article" : "articles"}
           </p>
         </div>
 
@@ -134,10 +119,7 @@ const BlogGrid = () => {
           <>
             <div className="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {visibleBlogs.map((blog) => (
-                <BlogCard
-                  key={blog.id}
-                  blog={blog}
-                />
+                <BlogCard key={blog.id} blog={blog} />
               ))}
             </div>
 
@@ -147,16 +129,13 @@ const BlogGrid = () => {
                 <p className="text-xs text-slate-500">
                   Showing{" "}
                   <span className="font-semibold text-slate-700">
-                    {(safeCurrentPage - 1) *
-                      BLOGS_PER_PAGE +
-                      1}
+                    {(safeCurrentPage - 1) * BLOGS_PER_PAGE + 1}
                   </span>{" "}
                   –{" "}
                   <span className="font-semibold text-slate-700">
                     {Math.min(
-                      safeCurrentPage *
-                        BLOGS_PER_PAGE,
-                      filteredBlogs.length
+                      safeCurrentPage * BLOGS_PER_PAGE,
+                      filteredBlogs.length,
                     )}
                   </span>{" "}
                   of{" "}
@@ -169,9 +148,7 @@ const BlogGrid = () => {
                   {/* Previous */}
                   <button
                     type="button"
-                    onClick={() =>
-                      changePage(safeCurrentPage - 1)
-                    }
+                    onClick={() => changePage(safeCurrentPage - 1)}
                     disabled={safeCurrentPage === 1}
                     aria-label="Previous page"
                     className="inline-flex h-9 w-9 items-center justify-center border border-slate-200 bg-white text-slate-600 transition-colors hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
@@ -182,22 +159,17 @@ const BlogGrid = () => {
                   {/* Page Numbers */}
                   {Array.from(
                     { length: totalPages },
-                    (_, index) => index + 1
+                    (_, index) => index + 1,
                   ).map((page) => {
-                    const active =
-                      page === safeCurrentPage;
+                    const active = page === safeCurrentPage;
 
                     return (
                       <button
                         key={page}
                         type="button"
-                        onClick={() =>
-                          changePage(page)
-                        }
+                        onClick={() => changePage(page)}
                         aria-label={`Go to page ${page}`}
-                        aria-current={
-                          active ? "page" : undefined
-                        }
+                        aria-current={active ? "page" : undefined}
                         className={`inline-flex h-9 min-w-9 items-center justify-center border px-3 text-xs font-semibold transition-colors ${
                           active
                             ? "border-[#A41034] bg-[#A41034] text-white"
@@ -212,12 +184,8 @@ const BlogGrid = () => {
                   {/* Next */}
                   <button
                     type="button"
-                    onClick={() =>
-                      changePage(safeCurrentPage + 1)
-                    }
-                    disabled={
-                      safeCurrentPage === totalPages
-                    }
+                    onClick={() => changePage(safeCurrentPage + 1)}
+                    disabled={safeCurrentPage === totalPages}
                     aria-label="Next page"
                     className="inline-flex h-9 w-9 items-center justify-center border border-slate-200 bg-white text-slate-600 transition-colors hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
                   >
@@ -230,18 +198,15 @@ const BlogGrid = () => {
         ) : (
           /* Empty State */
           <div className="mt-7 border border-slate-200 bg-white px-6 py-16 text-center">
-            <FiSearch
-              size={26}
-              className="mx-auto text-slate-300"
-            />
+            <FiSearch size={26} className="mx-auto text-slate-300" />
 
             <h3 className="mt-4 text-xl font-semibold text-slate-950">
               No articles found.
             </h3>
 
             <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-500">
-              Try another keyword or select a different category
-              to discover more articles.
+              Try another keyword or select a different category to discover
+              more articles.
             </p>
 
             <button
@@ -258,7 +223,7 @@ const BlogGrid = () => {
         <div className="mt-4 flex items-center justify-between border-t border-slate-200 pt-5">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.1em] text-slate-400">
             <FiBookOpen size={14} />
-            Orviqen Journal
+            Eklavya Journal
           </div>
 
           <p className="text-xs text-slate-400">

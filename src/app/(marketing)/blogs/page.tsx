@@ -13,11 +13,11 @@ import BlogCTA from "@/components/blogs/components/BlogCTA";
 import { featuredBlog } from "@/components/blogs/data/blogsData";
 
 export const metadata: Metadata = {
-  title: "Blogs | Technology, Learning, AI, Data & Careers | Orviqen",
+  title: "Blogs | Technology, Learning, AI, Data & Careers | Eklavya",
   description:
-    "Explore Orviqen articles on software development, artificial intelligence, cybersecurity, data, careers, programming and modern learning.",
+    "Explore Eklavya articles on software development, artificial intelligence, cybersecurity, data, careers, programming and modern learning.",
   keywords: [
-    "Orviqen blogs",
+    "Eklavya blogs",
     "technology blog",
     "programming blog",
     "software development blog",
@@ -29,16 +29,15 @@ export const metadata: Metadata = {
     "learning blog",
   ],
   openGraph: {
-    title: "Orviqen Journal",
-    description:
-      "Ideas, insights and practical knowledge for modern learners.",
+    title: "Eklavya Journal",
+    description: "Ideas, insights and practical knowledge for modern learners.",
     type: "website",
     images: [
       {
         url: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2000&q=85",
         width: 2000,
         height: 1200,
-        alt: "Orviqen Journal",
+        alt: "Eklavya Journal",
       },
     ],
   },

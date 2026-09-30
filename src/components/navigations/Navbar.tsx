@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import faviconlogo from "../../assets/logos/favicon.png"
+import faviconlogo from "../../assets/logos/favicon.png";
 import {
   FiArrowRight,
   FiChevronDown,
@@ -32,17 +32,8 @@ const Navbar = () => {
             className="group flex items-center gap-3"
           >
             {/* Institutional Monogram */}
-            {/* <div
-              className="flex h-11 w-11 items-center justify-center border-2 font-serif text-[15px] font-bold tracking-tight text-white"
-              style={{
-                backgroundColor: CRIMSON,
-                borderColor: CRIMSON,
-              }}
-            >
-              HC
-            </div> */}
             <div className="flex h-11 w-11 items-center justify-center">
-                <Image src={faviconlogo} alt="henley logo image"/>
+              <Image src={faviconlogo} alt="henley logo image" />
             </div>
 
             {/* Wordmark */}
@@ -51,7 +42,7 @@ const Navbar = () => {
                 className="font-serif text-[23px] font-bold tracking-[-0.02em]"
                 style={{ color: CRIMSON }}
               >
-                HenleyCrest
+                EklavyaED
               </div>
 
               <div className="mt-1 text-[8px] font-semibold uppercase tracking-[0.23em] text-slate-500">
@@ -85,13 +76,6 @@ const Navbar = () => {
               </Link>
 
               <Link
-                href="/career"
-                className="text-[14px] font-medium text-slate-700 transition-colors hover:text-[#A41034]"
-              >
-                Careers
-              </Link>
-
-              <Link
                 href="/resources"
                 className="flex items-center justifyce gap-1.5 text-[14px] font-medium text-slate-700 transition-colors hover:text-[#A41034]"
               >
@@ -109,6 +93,13 @@ const Navbar = () => {
                 className="text-[14px] font-medium text-slate-700 transition-colors hover:text-[#A41034]"
               >
                 Blogs
+              </Link>
+
+              <Link
+                href="/careers"
+                className="text-[14px] font-medium text-slate-700 transition-colors hover:text-[#A41034]"
+              >
+                Careers
               </Link>
             </div>
           </div>
@@ -140,11 +131,7 @@ const Navbar = () => {
             aria-expanded={mobileMenuOpen}
             className="flex h-10 w-10 items-center justify-center border border-slate-200 text-slate-800 transition hover:border-[#A41034] hover:text-[#A41034] lg:hidden"
           >
-            {mobileMenuOpen ? (
-              <FiX size={20} />
-            ) : (
-              <FiMenu size={20} />
-            )}
+            {mobileMenuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
           </button>
         </div>
       </nav>

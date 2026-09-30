@@ -304,14 +304,14 @@ const ChatAssistant = ({ floating = false, onClose }: ChatAssistantProps) => {
 
             <div className="min-w-0">
               <div className="flex items-center gap-2">
-                <h1 className="truncate text-base font-semibold text-slate-950 sm:text-sm">
+                <h1 className="truncate text-xl font-semibold text-slate-950 sm:text-sm">
                   {CHAT_ASSISTANT_CONFIG.title}
                 </h1>
 
                 <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500 sm:h-1.5 sm:w-1.5" />
               </div>
 
-              <p className="mt-0.5 truncate text-base text-slate-400 sm:text-[10px]">
+              <p className="mt-0.5 truncate text-slate-400 text-[10px] hidden md:block">
                 {CHAT_ASSISTANT_CONFIG.subtitle}
               </p>
             </div>

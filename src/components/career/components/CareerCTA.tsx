@@ -1,8 +1,10 @@
-import React from "react";
+import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import {
   FiArrowRight,
   FiMail,
+  FiSend,
 } from "react-icons/fi";
 
 const CareerCTA = () => {
@@ -14,48 +16,78 @@ const CareerCTA = () => {
       <div className="px-6 xl:px-30">
         <div className="relative overflow-hidden bg-slate-950">
           {/* Background Image */}
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=85"
             alt=""
-            className="absolute inset-0 h-full w-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-slate-950/78" />
+          <div className="absolute inset-0 bg-slate-950/80" />
 
-          <div className="relative px-6 py-10 sm:px-8 sm:py-12 lg:px-10">
-            <div className="flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
+          {/* Content */}
+          <div className="relative px-6 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
+            <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div className="max-w-2xl">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-white/65">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
                   <FiMail size={15} />
-                  Join HenleyCrest
+                  Open Applications
                 </div>
 
                 <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
-                  We would like to hear from you.
+                  Your role may not have a title yet.
                 </h2>
 
                 <p className="mt-3 max-w-xl text-sm leading-6 text-white/65 sm:text-base">
-                  If you do not see a role that matches your experience, send
-                  us your profile and tell us where you think you can
-                  contribute.
+                  Tell us what you do, what you are good at and
+                  where you believe you can contribute at
+                  EklavyaED.
                 </p>
+
+                <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/60">
+                  <span className="inline-flex items-center gap-1.5">
+                    <FiSend
+                      size={13}
+                      className="text-[#d16a84]"
+                    />
+                    Faculty & Trainers
+                  </span>
+
+                  <span className="inline-flex items-center gap-1.5">
+                    <FiSend
+                      size={13}
+                      className="text-[#d16a84]"
+                    />
+                    Technology
+                  </span>
+
+                  <span className="inline-flex items-center gap-1.5">
+                    <FiSend
+                      size={13}
+                      className="text-[#d16a84]"
+                    />
+                    Business & Operations
+                  </span>
+                </div>
               </div>
 
-              <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
+              {/* Actions */}
+              <div className="flex flex-col gap-2 sm:flex-row lg:flex-col">
                 <Link
-                  href="mailto:careers@henleycrest.com"
-                  className="inline-flex items-center justify-center gap-2 bg-[#A41034] px-5 py-3 text-sm font-semibold text-white hover:bg-[#8C0D2A]"
+                  href="#apply"
+                  className="inline-flex items-center justify-center gap-2 bg-[#A41034] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#8C0D2A]"
                 >
-                  Email Your Profile
+                  Apply by Domain
                   <FiArrowRight size={15} />
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 border border-white/25 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                  className="inline-flex items-center justify-center gap-2 border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                 >
-                  Contact Us
+                  Contact EklavyaED
                 </Link>
               </div>
             </div>

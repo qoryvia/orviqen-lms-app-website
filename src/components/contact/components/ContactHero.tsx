@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  FiArrowDown,
-  FiMessageCircle,
-} from "react-icons/fi";
+import { FiArrowDown, FiMessageCircle } from "react-icons/fi";
 
 const ContactHero = () => {
   return (
@@ -12,7 +9,7 @@ const ContactHero = () => {
           <div className="max-w-3xl">
             <div className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#A41034]">
               <FiMessageCircle size={15} />
-              Contact Orviqen
+              Contact Eklavya
             </div>
 
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
@@ -21,8 +18,8 @@ const ContactHero = () => {
 
             <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
               Have a question about a course, learning path, admissions,
-              partnerships or student support? Share your requirements and
-              our team will help point you in the right direction.
+              partnerships or student support? Share your requirements and our
+              team will help point you in the right direction.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -62,9 +59,7 @@ const ContactHero = () => {
                 >
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#A41034]" />
 
-                  <p className="text-sm font-medium text-slate-700">
-                    {item}
-                  </p>
+                  <p className="text-sm font-medium text-slate-700">{item}</p>
                 </div>
               ))}
             </div>

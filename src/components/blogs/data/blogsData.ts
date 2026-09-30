@@ -80,8 +80,7 @@ export const blogs: BlogPost[] = [
     id: "future-of-ai-learning",
     slug: "future-of-ai-learning",
 
-    title:
-      "How AI Is Changing the Way We Learn, Build and Work",
+    title: "How AI Is Changing the Way We Learn, Build and Work",
 
     excerpt:
       "Explore how artificial intelligence is reshaping learning experiences, software development and the skills modern professionals need to develop.",
@@ -89,11 +88,11 @@ export const blogs: BlogPost[] = [
     category: "AI & Machine Learning",
     subCategory: "Artificial Intelligence",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Learning & Technology",
 
     authorBio:
-      "The Orviqen Editorial team explores technology, learning and the skills required to navigate a rapidly evolving digital world.",
+      "The Eklavya Editorial team explores technology, learning and the skills required to navigate a rapidly evolving digital world.",
 
     date: "September 24, 2026",
     updatedDate: "September 25, 2026",
@@ -102,8 +101,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Artificial intelligence concept with digital interface",
+    imageAlt: "Artificial intelligence concept with digital interface",
 
     featured: true,
     popular: true,
@@ -113,12 +111,7 @@ export const blogs: BlogPost[] = [
     views: 4820,
     comments: 42,
 
-    tags: [
-      "Artificial Intelligence",
-      "Learning",
-      "Future of Work",
-      "AI Tools",
-    ],
+    tags: ["Artificial Intelligence", "Learning", "Future of Work", "AI Tools"],
 
     keyTakeaways: [
       "AI is becoming part of everyday learning and development workflows.",
@@ -200,7 +193,7 @@ export const blogs: BlogPost[] = [
 
     seo: {
       metaTitle:
-        "How AI Is Changing the Way We Learn, Build and Work | Orviqen",
+        "How AI Is Changing the Way We Learn, Build and Work | Eklavya",
       metaDescription:
         "Explore how artificial intelligence is changing learning, software development and the skills professionals need in a rapidly evolving technology landscape.",
       keywords: [
@@ -211,8 +204,7 @@ export const blogs: BlogPost[] = [
         "AI tools for developers",
       ],
       canonical: "/blogs/future-of-ai-learning",
-      socialTitle:
-        "How AI Is Changing the Way We Learn, Build and Work",
+      socialTitle: "How AI Is Changing the Way We Learn, Build and Work",
       socialDescription:
         "A practical look at AI, learning and modern software development.",
     },
@@ -222,8 +214,7 @@ export const blogs: BlogPost[] = [
     id: "frontend-development-roadmap",
     slug: "frontend-development-roadmap",
 
-    title:
-      "A Practical Frontend Development Roadmap for Beginners",
+    title: "A Practical Frontend Development Roadmap for Beginners",
 
     excerpt:
       "From HTML and CSS to JavaScript, React and modern application development, here is a structured way to approach frontend engineering.",
@@ -231,11 +222,11 @@ export const blogs: BlogPost[] = [
     category: "Software Development",
     subCategory: "Frontend Development",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Software Development",
 
     authorBio:
-      "The Orviqen Editorial team creates structured learning content around modern development technologies and practical engineering skills.",
+      "The Eklavya Editorial team creates structured learning content around modern development technologies and practical engineering skills.",
 
     date: "September 20, 2026",
     updatedDate: "September 21, 2026",
@@ -244,8 +235,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Developer writing frontend code on a computer",
+    imageAlt: "Developer writing frontend code on a computer",
 
     popular: true,
 
@@ -254,13 +244,7 @@ export const blogs: BlogPost[] = [
     views: 3620,
     comments: 28,
 
-    tags: [
-      "Frontend",
-      "React",
-      "JavaScript",
-      "TypeScript",
-      "Web Development",
-    ],
+    tags: ["Frontend", "React", "JavaScript", "TypeScript", "Web Development"],
 
     keyTakeaways: [
       "Start with HTML, CSS and browser fundamentals.",
@@ -342,8 +326,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Frontend Development Roadmap for Beginners | Orviqen",
+      metaTitle: "Frontend Development Roadmap for Beginners | Eklavya",
       metaDescription:
         "Follow a practical frontend development roadmap covering HTML, CSS, JavaScript, React, TypeScript, APIs, Git and deployment.",
       keywords: [
@@ -355,8 +338,7 @@ export const blogs: BlogPost[] = [
         "frontend developer",
       ],
       canonical: "/blogs/frontend-development-roadmap",
-      socialTitle:
-        "A Practical Frontend Development Roadmap for Beginners",
+      socialTitle: "A Practical Frontend Development Roadmap for Beginners",
       socialDescription:
         "Learn frontend development step by step from HTML and CSS to React.",
     },
@@ -366,8 +348,7 @@ export const blogs: BlogPost[] = [
     id: "learn-dsa-effectively",
     slug: "learn-dsa-effectively",
 
-    title:
-      "How to Learn Data Structures and Algorithms Effectively",
+    title: "How to Learn Data Structures and Algorithms Effectively",
 
     excerpt:
       "A practical framework for understanding complexity, mastering core data structures and building consistent problem-solving habits.",
@@ -375,11 +356,11 @@ export const blogs: BlogPost[] = [
     category: "Programming & DSA",
     subCategory: "Data Structures & Algorithms",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Learning",
 
     authorBio:
-      "The Orviqen Editorial team focuses on practical ways to build stronger programming and problem-solving skills.",
+      "The Eklavya Editorial team focuses on practical ways to build stronger programming and problem-solving skills.",
 
     date: "September 18, 2026",
     updatedDate: "September 19, 2026",
@@ -388,8 +369,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Laptop showing programming concepts and code",
+    imageAlt: "Laptop showing programming concepts and code",
 
     popular: true,
 
@@ -478,7 +458,7 @@ export const blogs: BlogPost[] = [
 
     seo: {
       metaTitle:
-        "How to Learn Data Structures and Algorithms Effectively | Orviqen",
+        "How to Learn Data Structures and Algorithms Effectively | Eklavya",
       metaDescription:
         "Learn how to approach DSA, complexity analysis, problem-solving patterns and coding practice with a structured learning system.",
       keywords: [
@@ -489,8 +469,7 @@ export const blogs: BlogPost[] = [
         "algorithm practice",
       ],
       canonical: "/blogs/learn-dsa-effectively",
-      socialTitle:
-        "How to Learn Data Structures and Algorithms Effectively",
+      socialTitle: "How to Learn Data Structures and Algorithms Effectively",
       socialDescription:
         "A practical framework for learning DSA and building stronger problem-solving skills.",
     },
@@ -500,8 +479,7 @@ export const blogs: BlogPost[] = [
     id: "backend-architecture-basics",
     slug: "backend-architecture-basics",
 
-    title:
-      "Backend Architecture Basics Every Developer Should Understand",
+    title: "Backend Architecture Basics Every Developer Should Understand",
 
     excerpt:
       "Understand APIs, databases, authentication, application structure and the building blocks behind modern backend systems.",
@@ -509,11 +487,11 @@ export const blogs: BlogPost[] = [
     category: "Software Development",
     subCategory: "Backend Development",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Backend Engineering",
 
     authorBio:
-      "The Orviqen Editorial team covers backend development, APIs, databases and modern application architecture.",
+      "The Eklavya Editorial team covers backend development, APIs, databases and modern application architecture.",
 
     date: "September 15, 2026",
     updatedDate: "September 16, 2026",
@@ -522,8 +500,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Backend infrastructure and server equipment",
+    imageAlt: "Backend infrastructure and server equipment",
 
     popular: true,
 
@@ -532,13 +509,7 @@ export const blogs: BlogPost[] = [
     views: 2940,
     comments: 19,
 
-    tags: [
-      "Backend",
-      "Node.js",
-      "APIs",
-      "Architecture",
-      "Databases",
-    ],
+    tags: ["Backend", "Node.js", "APIs", "Architecture", "Databases"],
 
     keyTakeaways: [
       "Backend systems are made up of multiple responsibilities.",
@@ -634,8 +605,7 @@ export const blogs: BlogPost[] = [
     id: "machine-learning-beginners",
     slug: "machine-learning-beginners",
 
-    title:
-      "Machine Learning for Beginners: Where Should You Start?",
+    title: "Machine Learning for Beginners: Where Should You Start?",
 
     excerpt:
       "A beginner-friendly introduction to machine learning concepts, Python workflows, datasets, models and practical projects.",
@@ -643,11 +613,11 @@ export const blogs: BlogPost[] = [
     category: "AI & Machine Learning",
     subCategory: "Machine Learning",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "AI & Data",
 
     authorBio:
-      "The Orviqen Editorial team explores AI, machine learning and practical data-driven development.",
+      "The Eklavya Editorial team explores AI, machine learning and practical data-driven development.",
 
     date: "September 12, 2026",
     updatedDate: "September 13, 2026",
@@ -656,8 +626,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Machine learning and data visualization concept",
+    imageAlt: "Machine learning and data visualization concept",
 
     popular: true,
 
@@ -666,13 +635,7 @@ export const blogs: BlogPost[] = [
     views: 3860,
     comments: 25,
 
-    tags: [
-      "Machine Learning",
-      "Python",
-      "AI",
-      "Data Science",
-      "Models",
-    ],
+    tags: ["Machine Learning", "Python", "AI", "Data Science", "Models"],
 
     keyTakeaways: [
       "Learn Python and data manipulation before jumping into advanced models.",
@@ -713,21 +676,14 @@ export const blogs: BlogPost[] = [
         paragraphs: [
           "Python is a practical starting point because its ecosystem includes libraries for numerical computing, data analysis and machine learning.",
         ],
-        bullets: [
-          "Python",
-          "NumPy",
-          "Pandas",
-          "Matplotlib",
-          "Scikit-learn",
-        ],
+        bullets: ["Python", "NumPy", "Pandas", "Matplotlib", "Scikit-learn"],
       },
       {
         heading: "Build Your First Model",
         paragraphs: [
           "A first machine learning project does not need to be complicated. A small classification or regression problem can teach the basic pipeline from dataset to evaluation.",
         ],
-        code:
-          "from sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression",
+        code: "from sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression",
       },
       {
         heading: "Learn Through Projects",
@@ -744,8 +700,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Machine Learning for Beginners | Where Should You Start?",
+      metaTitle: "Machine Learning for Beginners | Where Should You Start?",
       metaDescription:
         "Learn how beginners can start machine learning with Python, statistics, datasets, model training and practical projects.",
       keywords: [
@@ -756,8 +711,7 @@ export const blogs: BlogPost[] = [
         "Scikit-learn",
       ],
       canonical: "/blogs/machine-learning-beginners",
-      socialTitle:
-        "Machine Learning for Beginners: Where Should You Start?",
+      socialTitle: "Machine Learning for Beginners: Where Should You Start?",
       socialDescription:
         "A beginner-friendly roadmap for learning machine learning with Python.",
     },
@@ -767,8 +721,7 @@ export const blogs: BlogPost[] = [
     id: "cybersecurity-career-guide",
     slug: "cybersecurity-career-guide",
 
-    title:
-      "Starting a Career in Cybersecurity: A Skills-First Approach",
+    title: "Starting a Career in Cybersecurity: A Skills-First Approach",
 
     excerpt:
       "Learn how networking, Linux, security fundamentals and practical labs can help you develop a foundation for cybersecurity roles.",
@@ -776,11 +729,11 @@ export const blogs: BlogPost[] = [
     category: "Cybersecurity",
     subCategory: "Security Careers",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Cybersecurity",
 
     authorBio:
-      "The Orviqen Editorial team publishes practical content about security fundamentals, engineering and responsible cybersecurity learning.",
+      "The Eklavya Editorial team publishes practical content about security fundamentals, engineering and responsible cybersecurity learning.",
 
     date: "September 10, 2026",
     updatedDate: "September 11, 2026",
@@ -789,8 +742,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Cybersecurity concept with security monitoring interface",
+    imageAlt: "Cybersecurity concept with security monitoring interface",
 
     popular: true,
 
@@ -799,13 +751,7 @@ export const blogs: BlogPost[] = [
     views: 3170,
     comments: 17,
 
-    tags: [
-      "Cybersecurity",
-      "Linux",
-      "Networking",
-      "SOC",
-      "Security",
-    ],
+    tags: ["Cybersecurity", "Linux", "Networking", "SOC", "Security"],
 
     keyTakeaways: [
       "Networking fundamentals provide an important foundation.",
@@ -874,8 +820,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Starting a Career in Cybersecurity | A Skills-First Approach",
+      metaTitle: "Starting a Career in Cybersecurity | A Skills-First Approach",
       metaDescription:
         "Learn the foundational skills for cybersecurity including networking, Linux, security concepts, safe labs and professional communication.",
       keywords: [
@@ -897,8 +842,7 @@ export const blogs: BlogPost[] = [
     id: "data-analytics-skills",
     slug: "data-analytics-skills",
 
-    title:
-      "The Data Analytics Skills That Matter for Modern Teams",
+    title: "The Data Analytics Skills That Matter for Modern Teams",
 
     excerpt:
       "Understand the practical combination of SQL, spreadsheets, visualization and business thinking behind effective analytics work.",
@@ -906,11 +850,11 @@ export const blogs: BlogPost[] = [
     category: "Data",
     subCategory: "Data Analytics",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Data & Analytics",
 
     authorBio:
-      "The Orviqen Editorial team explores practical analytics, data science and technology skills.",
+      "The Eklavya Editorial team explores practical analytics, data science and technology skills.",
 
     date: "September 07, 2026",
     updatedDate: "September 08, 2026",
@@ -919,8 +863,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Analytics dashboard and charts",
+    imageAlt: "Analytics dashboard and charts",
 
     popular: true,
 
@@ -929,13 +872,7 @@ export const blogs: BlogPost[] = [
     views: 2640,
     comments: 14,
 
-    tags: [
-      "Data Analytics",
-      "SQL",
-      "Power BI",
-      "Excel",
-      "Dashboards",
-    ],
+    tags: ["Data Analytics", "SQL", "Power BI", "Excel", "Dashboards"],
 
     keyTakeaways: [
       "SQL is one of the most useful practical analytics skills.",
@@ -997,8 +934,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Data Analytics Skills That Matter for Modern Teams",
+      metaTitle: "Data Analytics Skills That Matter for Modern Teams",
       metaDescription:
         "Learn about the practical data analytics skills that combine SQL, spreadsheets, visualization, dashboards and business thinking.",
       keywords: [
@@ -1010,10 +946,8 @@ export const blogs: BlogPost[] = [
         "business analytics",
       ],
       canonical: "/blogs/data-analytics-skills",
-      socialTitle:
-        "The Data Analytics Skills That Matter for Modern Teams",
-      socialDescription:
-        "Explore practical skills for modern data analysts.",
+      socialTitle: "The Data Analytics Skills That Matter for Modern Teams",
+      socialDescription: "Explore practical skills for modern data analysts.",
     },
   },
 
@@ -1021,8 +955,7 @@ export const blogs: BlogPost[] = [
     id: "portfolio-development-guide",
     slug: "portfolio-development-guide",
 
-    title:
-      "How to Build a Developer Portfolio That Shows Real Skills",
+    title: "How to Build a Developer Portfolio That Shows Real Skills",
 
     excerpt:
       "Learn how to choose projects, document your work and create a portfolio that communicates your technical abilities clearly.",
@@ -1030,11 +963,11 @@ export const blogs: BlogPost[] = [
     category: "Career",
     subCategory: "Developer Career",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Career & Learning",
 
     authorBio:
-      "The Orviqen Editorial team focuses on learning strategy, project development and technical careers.",
+      "The Eklavya Editorial team focuses on learning strategy, project development and technical careers.",
 
     date: "September 04, 2026",
     updatedDate: "September 05, 2026",
@@ -1043,8 +976,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Developer planning projects and working on a laptop",
+    imageAlt: "Developer planning projects and working on a laptop",
 
     popular: true,
 
@@ -1053,13 +985,7 @@ export const blogs: BlogPost[] = [
     views: 3410,
     comments: 23,
 
-    tags: [
-      "Career",
-      "Portfolio",
-      "Developers",
-      "Projects",
-      "GitHub",
-    ],
+    tags: ["Career", "Portfolio", "Developers", "Projects", "GitHub"],
 
     keyTakeaways: [
       "A smaller number of strong projects is often better than many unfinished projects.",
@@ -1128,8 +1054,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "How to Build a Developer Portfolio That Shows Real Skills",
+      metaTitle: "How to Build a Developer Portfolio That Shows Real Skills",
       metaDescription:
         "Learn how to select technical projects, document your work and create a developer portfolio that clearly communicates your skills.",
       keywords: [
@@ -1140,8 +1065,7 @@ export const blogs: BlogPost[] = [
         "career portfolio",
       ],
       canonical: "/blogs/portfolio-development-guide",
-      socialTitle:
-        "How to Build a Developer Portfolio That Shows Real Skills",
+      socialTitle: "How to Build a Developer Portfolio That Shows Real Skills",
       socialDescription:
         "A practical guide to building a stronger developer portfolio.",
     },
@@ -1151,8 +1075,7 @@ export const blogs: BlogPost[] = [
     id: "typescript-modern-development",
     slug: "typescript-modern-development",
 
-    title:
-      "Why TypeScript Has Become Important for Modern Web Applications",
+    title: "Why TypeScript Has Become Important for Modern Web Applications",
 
     excerpt:
       "Explore how type systems improve developer experience, application structure and maintainability in larger JavaScript projects.",
@@ -1160,11 +1083,11 @@ export const blogs: BlogPost[] = [
     category: "Technology",
     subCategory: "TypeScript & JavaScript",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Technology",
 
     authorBio:
-      "The Orviqen Editorial team publishes practical perspectives on programming languages, application architecture and modern technology.",
+      "The Eklavya Editorial team publishes practical perspectives on programming languages, application architecture and modern technology.",
 
     date: "August 31, 2026",
     updatedDate: "September 01, 2026",
@@ -1173,21 +1096,14 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Source code displayed on a developer workspace",
+    imageAlt: "Source code displayed on a developer workspace",
 
     difficulty: "Intermediate",
 
     views: 2280,
     comments: 12,
 
-    tags: [
-      "TypeScript",
-      "JavaScript",
-      "Web Development",
-      "React",
-      "Node.js",
-    ],
+    tags: ["TypeScript", "JavaScript", "Web Development", "React", "Node.js"],
 
     keyTakeaways: [
       "TypeScript adds static type checking to the JavaScript ecosystem.",
@@ -1257,8 +1173,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Why TypeScript Matters for Modern Web Applications",
+      metaTitle: "Why TypeScript Matters for Modern Web Applications",
       metaDescription:
         "Explore the benefits of TypeScript for React, Node.js and larger JavaScript applications.",
       keywords: [
@@ -1280,8 +1195,7 @@ export const blogs: BlogPost[] = [
     id: "cloud-devops-foundations",
     slug: "cloud-devops-foundations",
 
-    title:
-      "Cloud and DevOps Foundations for Aspiring Developers",
+    title: "Cloud and DevOps Foundations for Aspiring Developers",
 
     excerpt:
       "Understand the fundamentals of Linux, containers, deployment pipelines, cloud infrastructure and modern application operations.",
@@ -1289,11 +1203,11 @@ export const blogs: BlogPost[] = [
     category: "Cloud & DevOps",
     subCategory: "Cloud Engineering",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Cloud & DevOps",
 
     authorBio:
-      "The Orviqen Editorial team explores cloud infrastructure, deployment systems and modern engineering practices.",
+      "The Eklavya Editorial team explores cloud infrastructure, deployment systems and modern engineering practices.",
 
     date: "August 28, 2026",
     updatedDate: "August 29, 2026",
@@ -1302,22 +1216,14 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Cloud computing infrastructure visualization",
+    imageAlt: "Cloud computing infrastructure visualization",
 
     difficulty: "Intermediate",
 
     views: 2510,
     comments: 16,
 
-    tags: [
-      "Cloud",
-      "DevOps",
-      "Docker",
-      "AWS",
-      "CI/CD",
-      "Linux",
-    ],
+    tags: ["Cloud", "DevOps", "Docker", "AWS", "CI/CD", "Linux"],
 
     keyTakeaways: [
       "Linux and networking provide a strong infrastructure foundation.",
@@ -1386,8 +1292,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Cloud and DevOps Foundations for Aspiring Developers",
+      metaTitle: "Cloud and DevOps Foundations for Aspiring Developers",
       metaDescription:
         "Learn Linux, containers, CI/CD, cloud infrastructure and application deployment fundamentals.",
       keywords: [
@@ -1399,8 +1304,7 @@ export const blogs: BlogPost[] = [
         "Linux",
       ],
       canonical: "/blogs/cloud-devops-foundations",
-      socialTitle:
-        "Cloud and DevOps Foundations for Aspiring Developers",
+      socialTitle: "Cloud and DevOps Foundations for Aspiring Developers",
       socialDescription:
         "Understand the fundamentals behind modern cloud and DevOps workflows.",
     },
@@ -1410,8 +1314,7 @@ export const blogs: BlogPost[] = [
     id: "study-routine-programming",
     slug: "study-routine-programming",
 
-    title:
-      "Designing a Sustainable Study Routine for Programming",
+    title: "Designing a Sustainable Study Routine for Programming",
 
     excerpt:
       "Learn how to balance theory, coding practice, projects and revision without turning your learning process into an exhausting routine.",
@@ -1419,11 +1322,11 @@ export const blogs: BlogPost[] = [
     category: "Learning",
     subCategory: "Study Strategy",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Learning",
 
     authorBio:
-      "The Orviqen Editorial team focuses on practical learning strategies for technical subjects.",
+      "The Eklavya Editorial team focuses on practical learning strategies for technical subjects.",
 
     date: "August 25, 2026",
     updatedDate: "August 26, 2026",
@@ -1432,20 +1335,14 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Student studying with laptop and notebook",
+    imageAlt: "Student studying with laptop and notebook",
 
     difficulty: "Beginner",
 
     views: 1860,
     comments: 11,
 
-    tags: [
-      "Study",
-      "Learning",
-      "Programming",
-      "Productivity",
-    ],
+    tags: ["Study", "Learning", "Programming", "Productivity"],
 
     keyTakeaways: [
       "Use a repeatable schedule instead of relying on motivation.",
@@ -1514,8 +1411,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "How to Build a Sustainable Study Routine for Programming",
+      metaTitle: "How to Build a Sustainable Study Routine for Programming",
       metaDescription:
         "Learn how to structure programming study sessions around theory, practice, revision and projects.",
       keywords: [
@@ -1525,8 +1421,7 @@ export const blogs: BlogPost[] = [
         "programming productivity",
       ],
       canonical: "/blogs/study-routine-programming",
-      socialTitle:
-        "Designing a Sustainable Study Routine for Programming",
+      socialTitle: "Designing a Sustainable Study Routine for Programming",
       socialDescription:
         "A practical framework for creating a consistent programming study routine.",
     },
@@ -1536,8 +1431,7 @@ export const blogs: BlogPost[] = [
     id: "python-for-career",
     slug: "python-for-career",
 
-    title:
-      "Why Python Remains a Strong Foundation for Technical Careers",
+    title: "Why Python Remains a Strong Foundation for Technical Careers",
 
     excerpt:
       "From backend development and automation to data and AI, explore the broad ecosystem around Python and where it can take you.",
@@ -1545,11 +1439,11 @@ export const blogs: BlogPost[] = [
     category: "Technology",
     subCategory: "Python",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Programming",
 
     authorBio:
-      "The Orviqen Editorial team explores programming languages, development workflows and technical career paths.",
+      "The Eklavya Editorial team explores programming languages, development workflows and technical career paths.",
 
     date: "August 22, 2026",
     updatedDate: "August 23, 2026",
@@ -1558,21 +1452,14 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Python code displayed in a development environment",
+    imageAlt: "Python code displayed in a development environment",
 
     difficulty: "Beginner",
 
     views: 3140,
     comments: 21,
 
-    tags: [
-      "Python",
-      "Programming",
-      "Backend",
-      "Data",
-      "AI",
-    ],
+    tags: ["Python", "Programming", "Backend", "Data", "AI"],
 
     keyTakeaways: [
       "Python has applications across multiple technical domains.",
@@ -1618,13 +1505,7 @@ export const blogs: BlogPost[] = [
         paragraphs: [
           "Python has a large ecosystem for data analysis and machine learning, making it useful beyond traditional application development.",
         ],
-        bullets: [
-          "Pandas",
-          "NumPy",
-          "Scikit-learn",
-          "PyTorch",
-          "TensorFlow",
-        ],
+        bullets: ["Pandas", "NumPy", "Scikit-learn", "PyTorch", "TensorFlow"],
       },
       {
         heading: "Building a Python Career Path",
@@ -1641,8 +1522,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Why Python Remains a Strong Foundation for Technical Careers",
+      metaTitle: "Why Python Remains a Strong Foundation for Technical Careers",
       metaDescription:
         "Explore Python's role in backend development, automation, data science, AI and modern technical careers.",
       keywords: [
@@ -1664,8 +1544,7 @@ export const blogs: BlogPost[] = [
     id: "javascript-vs-typescript",
     slug: "javascript-vs-typescript",
 
-    title:
-      "JavaScript vs TypeScript: Understanding the Difference",
+    title: "JavaScript vs TypeScript: Understanding the Difference",
 
     excerpt:
       "Learn where JavaScript ends, where TypeScript adds value and how developers can decide which approach fits a project.",
@@ -1673,11 +1552,11 @@ export const blogs: BlogPost[] = [
     category: "Technology",
     subCategory: "JavaScript & TypeScript",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Technology",
 
     authorBio:
-      "The Orviqen Editorial team publishes practical comparisons and guides for modern software development.",
+      "The Eklavya Editorial team publishes practical comparisons and guides for modern software development.",
 
     date: "August 19, 2026",
     updatedDate: "August 20, 2026",
@@ -1686,21 +1565,14 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "JavaScript and TypeScript development workspace",
+    imageAlt: "JavaScript and TypeScript development workspace",
 
     difficulty: "Intermediate",
 
     views: 1980,
     comments: 9,
 
-    tags: [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Node.js",
-      "Web Development",
-    ],
+    tags: ["JavaScript", "TypeScript", "React", "Node.js", "Web Development"],
 
     keyTakeaways: [
       "TypeScript is built on top of JavaScript rather than replacing it.",
@@ -1752,8 +1624,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "JavaScript vs TypeScript | Understanding the Difference",
+      metaTitle: "JavaScript vs TypeScript | Understanding the Difference",
       metaDescription:
         "Understand the differences between JavaScript and TypeScript and when each approach makes sense.",
       keywords: [
@@ -1764,8 +1635,7 @@ export const blogs: BlogPost[] = [
         "Node TypeScript",
       ],
       canonical: "/blogs/javascript-vs-typescript",
-      socialTitle:
-        "JavaScript vs TypeScript: Understanding the Difference",
+      socialTitle: "JavaScript vs TypeScript: Understanding the Difference",
       socialDescription:
         "Learn where TypeScript fits into the JavaScript ecosystem.",
     },
@@ -1775,8 +1645,7 @@ export const blogs: BlogPost[] = [
     id: "api-design-principles",
     slug: "api-design-principles",
 
-    title:
-      "Practical API Design Principles for Modern Applications",
+    title: "Practical API Design Principles for Modern Applications",
 
     excerpt:
       "Explore practical ideas for designing APIs that remain understandable, predictable and maintainable as an application grows.",
@@ -1784,11 +1653,11 @@ export const blogs: BlogPost[] = [
     category: "Software Development",
     subCategory: "API Development",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Backend Engineering",
 
     authorBio:
-      "The Orviqen Editorial team writes about backend architecture, APIs and software engineering practices.",
+      "The Eklavya Editorial team writes about backend architecture, APIs and software engineering practices.",
 
     date: "August 16, 2026",
     updatedDate: "August 17, 2026",
@@ -1797,21 +1666,14 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Developer working with API and backend code",
+    imageAlt: "Developer working with API and backend code",
 
     difficulty: "Intermediate",
 
     views: 1740,
     comments: 8,
 
-    tags: [
-      "APIs",
-      "REST",
-      "Backend",
-      "Node.js",
-      "Architecture",
-    ],
+    tags: ["APIs", "REST", "Backend", "Node.js", "Architecture"],
 
     keyTakeaways: [
       "Consistency is one of the most important qualities of an API.",
@@ -1873,8 +1735,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Practical API Design Principles for Modern Applications",
+      metaTitle: "Practical API Design Principles for Modern Applications",
       metaDescription:
         "Learn practical API design principles covering resource naming, validation, errors, security and maintainability.",
       keywords: [
@@ -1885,8 +1746,7 @@ export const blogs: BlogPost[] = [
         "Node.js API",
       ],
       canonical: "/blogs/api-design-principles",
-      socialTitle:
-        "Practical API Design Principles for Modern Applications",
+      socialTitle: "Practical API Design Principles for Modern Applications",
       socialDescription:
         "Learn how to design APIs that remain predictable and maintainable.",
     },
@@ -1896,8 +1756,7 @@ export const blogs: BlogPost[] = [
     id: "react-component-design",
     slug: "react-component-design",
 
-    title:
-      "Designing Better React Components for Growing Applications",
+    title: "Designing Better React Components for Growing Applications",
 
     excerpt:
       "Learn how component boundaries, reusable patterns and predictable data flow can improve React applications as they become larger.",
@@ -1905,11 +1764,11 @@ export const blogs: BlogPost[] = [
     category: "Software Development",
     subCategory: "React Development",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Frontend Engineering",
 
     authorBio:
-      "The Orviqen Editorial team explores frontend engineering, React architecture and modern web application design.",
+      "The Eklavya Editorial team explores frontend engineering, React architecture and modern web application design.",
 
     date: "August 13, 2026",
     updatedDate: "August 14, 2026",
@@ -1918,21 +1777,14 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Frontend development and application design workspace",
+    imageAlt: "Frontend development and application design workspace",
 
     difficulty: "Intermediate",
 
     views: 2190,
     comments: 13,
 
-    tags: [
-      "React",
-      "Frontend",
-      "Components",
-      "Architecture",
-      "UI",
-    ],
+    tags: ["React", "Frontend", "Components", "Architecture", "UI"],
 
     keyTakeaways: [
       "A component should have a clear responsibility.",
@@ -1984,8 +1836,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Designing Better React Components for Growing Applications",
+      metaTitle: "Designing Better React Components for Growing Applications",
       metaDescription:
         "Learn practical React component design principles for reusable, maintainable and scalable frontend applications.",
       keywords: [
@@ -1995,8 +1846,7 @@ export const blogs: BlogPost[] = [
         "React best practices",
       ],
       canonical: "/blogs/react-component-design",
-      socialTitle:
-        "Designing Better React Components for Growing Applications",
+      socialTitle: "Designing Better React Components for Growing Applications",
       socialDescription:
         "Practical principles for better React component design.",
     },
@@ -2006,8 +1856,7 @@ export const blogs: BlogPost[] = [
     id: "sql-for-developers",
     slug: "sql-for-developers",
 
-    title:
-      "Why Developers Should Understand SQL Even When They Use an ORM",
+    title: "Why Developers Should Understand SQL Even When They Use an ORM",
 
     excerpt:
       "ORMs improve developer productivity, but understanding SQL helps developers reason about queries, relationships and application performance.",
@@ -2015,11 +1864,11 @@ export const blogs: BlogPost[] = [
     category: "Data",
     subCategory: "SQL & Databases",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Data & Backend",
 
     authorBio:
-      "The Orviqen Editorial team explores databases, backend engineering and practical data skills.",
+      "The Eklavya Editorial team explores databases, backend engineering and practical data skills.",
 
     date: "August 10, 2026",
     updatedDate: "August 11, 2026",
@@ -2028,21 +1877,14 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Database development and SQL concept",
+    imageAlt: "Database development and SQL concept",
 
     difficulty: "Intermediate",
 
     views: 2030,
     comments: 10,
 
-    tags: [
-      "SQL",
-      "Databases",
-      "PostgreSQL",
-      "Backend",
-      "ORM",
-    ],
+    tags: ["SQL", "Databases", "PostgreSQL", "Backend", "ORM"],
 
     keyTakeaways: [
       "ORMs do not remove the need to understand database behavior.",
@@ -2094,8 +1936,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "Why Developers Should Understand SQL Even When Using an ORM",
+      metaTitle: "Why Developers Should Understand SQL Even When Using an ORM",
       metaDescription:
         "Learn why SQL knowledge remains valuable for developers working with ORMs, databases, queries and backend applications.",
       keywords: [
@@ -2117,8 +1958,7 @@ export const blogs: BlogPost[] = [
     id: "building-saas-project",
     slug: "building-saas-project",
 
-    title:
-      "What You Learn by Building a Real SaaS Project",
+    title: "What You Learn by Building a Real SaaS Project",
 
     excerpt:
       "A production-style SaaS application teaches much more than a framework tutorial because it forces you to connect frontend, backend, databases and deployment.",
@@ -2126,11 +1966,11 @@ export const blogs: BlogPost[] = [
     category: "Learning",
     subCategory: "Project-Based Learning",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Project-Based Learning",
 
     authorBio:
-      "The Orviqen Editorial team focuses on learning through practical applications and project-based development.",
+      "The Eklavya Editorial team focuses on learning through practical applications and project-based development.",
 
     date: "August 06, 2026",
     updatedDate: "August 07, 2026",
@@ -2139,21 +1979,14 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Analytics dashboard representing a SaaS application",
+    imageAlt: "Analytics dashboard representing a SaaS application",
 
     difficulty: "Advanced",
 
     views: 1730,
     comments: 9,
 
-    tags: [
-      "SaaS",
-      "Full Stack",
-      "Projects",
-      "React",
-      "Node.js",
-    ],
+    tags: ["SaaS", "Full Stack", "Projects", "React", "Node.js"],
 
     keyTakeaways: [
       "Projects reveal gaps that tutorials can hide.",
@@ -2223,8 +2056,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "What You Learn by Building a Real SaaS Project",
+      metaTitle: "What You Learn by Building a Real SaaS Project",
       metaDescription:
         "Explore the engineering skills developed by building a production-style SaaS application from requirements through deployment.",
       keywords: [
@@ -2234,8 +2066,7 @@ export const blogs: BlogPost[] = [
         "React Node.js project",
       ],
       canonical: "/blogs/building-saas-project",
-      socialTitle:
-        "What You Learn by Building a Real SaaS Project",
+      socialTitle: "What You Learn by Building a Real SaaS Project",
       socialDescription:
         "Discover why real projects accelerate software development learning.",
     },
@@ -2254,11 +2085,11 @@ export const blogs: BlogPost[] = [
     category: "Career",
     subCategory: "Technical Interviews",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Career & Technology",
 
     authorBio:
-      "The Orviqen Editorial team creates practical guidance for technical learning and career development.",
+      "The Eklavya Editorial team creates practical guidance for technical learning and career development.",
 
     date: "August 02, 2026",
     updatedDate: "August 03, 2026",
@@ -2267,8 +2098,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Professional discussion during a technology interview",
+    imageAlt: "Professional discussion during a technology interview",
 
     popular: true,
 
@@ -2345,8 +2175,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "How to Prepare for Technical Interviews | Orviqen",
+      metaTitle: "How to Prepare for Technical Interviews | Eklavya",
       metaDescription:
         "Build a balanced technical interview preparation plan covering DSA, projects, communication and mock interviews.",
       keywords: [
@@ -2368,8 +2197,7 @@ export const blogs: BlogPost[] = [
     id: "full-stack-development-roadmap",
     slug: "full-stack-development-roadmap",
 
-    title:
-      "A Modern Full Stack Development Roadmap",
+    title: "A Modern Full Stack Development Roadmap",
 
     excerpt:
       "Learn how frontend, backend, databases, APIs, authentication and deployment fit together in a practical full stack learning path.",
@@ -2377,11 +2205,11 @@ export const blogs: BlogPost[] = [
     category: "Software Development",
     subCategory: "Full Stack Development",
 
-    author: "Orviqen Editorial",
+    author: "Eklavya Editorial",
     authorRole: "Software Development",
 
     authorBio:
-      "The Orviqen Editorial team creates structured technical learning resources for aspiring and working developers.",
+      "The Eklavya Editorial team creates structured technical learning resources for aspiring and working developers.",
 
     date: "July 29, 2026",
     updatedDate: "July 30, 2026",
@@ -2390,8 +2218,7 @@ export const blogs: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=85",
 
-    imageAlt:
-      "Full stack development workspace with code editor",
+    imageAlt: "Full stack development workspace with code editor",
 
     featured: false,
     popular: true,
@@ -2401,13 +2228,7 @@ export const blogs: BlogPost[] = [
     views: 4110,
     comments: 35,
 
-    tags: [
-      "Full Stack",
-      "React",
-      "Node.js",
-      "Databases",
-      "APIs",
-    ],
+    tags: ["Full Stack", "React", "Node.js", "Databases", "APIs"],
 
     keyTakeaways: [
       "Frontend and backend should be learned as connected systems.",
@@ -2477,8 +2298,7 @@ export const blogs: BlogPost[] = [
     ],
 
     seo: {
-      metaTitle:
-        "A Modern Full Stack Development Roadmap | Orviqen",
+      metaTitle: "A Modern Full Stack Development Roadmap | Eklavya",
       metaDescription:
         "Follow a modern full stack roadmap covering frontend, backend, databases, APIs, authentication and deployment.",
       keywords: [
@@ -2489,13 +2309,11 @@ export const blogs: BlogPost[] = [
         "web development roadmap",
       ],
       canonical: "/blogs/full-stack-development-roadmap",
-      socialTitle:
-        "A Modern Full Stack Development Roadmap",
+      socialTitle: "A Modern Full Stack Development Roadmap",
       socialDescription:
         "A practical learning path for becoming a full stack developer.",
     },
   },
 ];
 
-export const featuredBlog =
-  blogs.find((blog) => blog.featured) || blogs[0];
+export const featuredBlog = blogs.find((blog) => blog.featured) || blogs[0];

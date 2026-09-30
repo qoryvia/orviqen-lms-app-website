@@ -13,6 +13,10 @@ interface CoursePrerequisitesProps {
 const CoursePrerequisites = ({
   course,
 }: CoursePrerequisitesProps) => {
+  if (!course.prerequisites?.length) {
+    return null;
+  }
+
   return (
     <section>
       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#A41034]">
@@ -23,37 +27,36 @@ const CoursePrerequisites = ({
         Prerequisites
       </h2>
 
-      <div className="mt-6 border border-slate-200 bg-slate-50 p-6">
-        <div className="flex items-start gap-3">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-white text-[#A41034]">
-            <FiInfo size={17} />
+      <div className="mt-6 border border-slate-200">
+        <div className="flex items-start gap-3 border-b border-slate-200 bg-slate-50 p-5">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center bg-white text-[#A41034]">
+            <FiInfo size={16} />
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-slate-950">
+            <p className="text-sm font-semibold text-slate-900">
               Recommended starting point
             </p>
 
-            <p className="mt-1 text-sm leading-6 text-slate-500">
-              These requirements help you get the most from the
-              course. They are not necessarily required for every
-              learner.
+            <p className="mt-1 text-xs leading-5 text-slate-500">
+              These are the recommended foundations for getting the
+              most out of the course.
             </p>
           </div>
         </div>
 
-        <div className="mt-6 space-y-3">
-          {(course.prerequisites || []).map((item) => (
+        <div className="grid gap-2 p-4 sm:grid-cols-2">
+          {course.prerequisites.map((item) => (
             <div
               key={item}
-              className="flex items-center gap-3 border border-slate-200 bg-white p-4"
+              className="flex items-start gap-2.5 border border-slate-100 px-3.5 py-3"
             >
               <FiCheck
-                size={16}
-                className="shrink-0 text-[#A41034]"
+                size={14}
+                className="mt-0.5 shrink-0 text-[#A41034]"
               />
 
-              <span className="text-sm text-slate-600">
+              <span className="text-xs leading-5 text-slate-600">
                 {item}
               </span>
             </div>

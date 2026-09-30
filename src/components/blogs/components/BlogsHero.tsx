@@ -1,10 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import {
-  FiArrowDown,
-  FiArrowRight,
-  FiBookOpen,
-} from "react-icons/fi";
+import { FiArrowDown, FiArrowRight, FiBookOpen } from "react-icons/fi";
 
 const BlogsHero = () => {
   return (
@@ -27,7 +23,7 @@ const BlogsHero = () => {
             <div className="max-w-3xl text-white">
               <div className="inline-flex items-center gap-2 border border-white/20 bg-white/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm">
                 <FiBookOpen size={14} />
-                Orviqen Journal
+                Eklavya Journal
               </div>
 
               <h1 className="mt-6 text-4xl font-semibold leading-[1.04] tracking-tight sm:text-5xl lg:text-7xl">
@@ -35,9 +31,9 @@ const BlogsHero = () => {
               </h1>
 
               <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-200 sm:text-base">
-                Explore practical articles on software development,
-                artificial intelligence, cybersecurity, data, careers and
-                the evolving world of technology.
+                Explore practical articles on software development, artificial
+                intelligence, cybersecurity, data, careers and the evolving
+                world of technology.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -74,21 +70,16 @@ const BlogsHero = () => {
                     "Career",
                     "Learning",
                   ].map((item) => (
-                    <div
-                      key={item}
-                      className="border-b border-white/10 pb-3"
-                    >
-                      <p className="text-sm text-slate-200">
-                        {item}
-                      </p>
+                    <div key={item} className="border-b border-white/10 pb-3">
+                      <p className="text-sm text-slate-200">{item}</p>
                     </div>
                   ))}
                 </div>
 
                 <div className="mt-6 border-t border-white/10 pt-5">
                   <p className="text-xs leading-5 text-slate-400">
-                    Practical, structured and designed to help you
-                    understand what to learn next.
+                    Practical, structured and designed to help you understand
+                    what to learn next.
                   </p>
                 </div>
               </div>

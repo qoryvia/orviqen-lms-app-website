@@ -26,7 +26,7 @@ const ApplyHero = () => {
             <div className="max-w-3xl text-white">
               <div className="inline-flex items-center gap-2 border border-white/15 bg-white/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm">
                 <FiFileText size={14} />
-                Apply to Orviqen
+                Apply to Eklavya
               </div>
 
               <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
@@ -34,9 +34,9 @@ const ApplyHero = () => {
               </h1>
 
               <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-200 sm:text-base">
-                Tell us what you want to learn, where you are starting
-                from and what you want to achieve. Submit an application
-                and take the first step toward your learning path.
+                Tell us what you want to learn, where you are starting from and
+                what you want to achieve. Submit an application and take the
+                first step toward your learning path.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -83,9 +83,7 @@ const ApplyHero = () => {
                       className="shrink-0 text-[#e0a1b1]"
                     />
 
-                    <span className="text-sm text-slate-200">
-                      {item}
-                    </span>
+                    <span className="text-sm text-slate-200">{item}</span>
                   </div>
                 ))}
               </div>

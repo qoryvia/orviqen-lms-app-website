@@ -53,7 +53,7 @@ const Footer = () => {
                   className="font-serif text-[23px] font-bold tracking-[-0.02em]"
                   style={{ color: CRIMSON }}
                 >
-                  HenleyCrest
+                  EklavyaED
                 </div>
 
                 <div className="mt-1 text-[8px] font-semibold uppercase tracking-[0.23em] text-white/45">
@@ -112,7 +112,7 @@ const Footer = () => {
               className="shrink-0"
               style={{ color: CRIMSON }}
             />
-            hello@henleycrest.com
+            hello@eklavyaed.com
           </a>
 
           <a

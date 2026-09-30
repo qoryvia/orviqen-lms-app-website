@@ -6,7 +6,7 @@ import Footer from "@/components/navigations/Footer";
 import ChatAssistant from "@/components/chatassistant/components/ChatAssistant";
 
 export const metadata: Metadata = {
-  title: "Learning Assistant | Orviqen",
+  title: "Learning Assistant | Eklavya",
   description:
     "Ask questions about courses, learning roadmaps, skills and careers.",
 };
@@ -28,8 +28,8 @@ const ChatAssistantPage = () => {
             </h1>
 
             <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-500">
-              Ask about courses, learning roadmaps, programming,
-              projects or your career direction.
+              Ask about courses, learning roadmaps, programming, projects or
+              your career direction.
             </p>
           </div>
 

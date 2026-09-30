@@ -24,15 +24,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Orviqen | Learn Technology, Build Skills, Shape Your Future",
-    template: "%s | Orviqen",
+    default: "Eklavya | Learn Technology, Build Skills, Shape Your Future",
+    template: "%s | Eklavya",
   },
 
   description:
-    "Orviqen is a modern learning platform for software development, artificial intelligence, machine learning, data, cybersecurity, cloud and programming.",
+    "Eklavya is a modern learning platform for software development, artificial intelligence, machine learning, data, cybersecurity, cloud and programming.",
 
   keywords: [
-    "Orviqen",
+    "Eklavya",
     "online learning",
     "technology courses",
     "software development",
@@ -58,14 +58,14 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "Orviqen",
+      name: "Eklavya",
     },
   ],
 
-  creator: "Orviqen",
-  publisher: "Orviqen",
+  creator: "Eklavya",
+  publisher: "Eklavya",
 
-  applicationName: "Orviqen",
+  applicationName: "Eklavya",
 
   category: "education",
 
@@ -112,10 +112,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Orviqen",
+    siteName: "Eklavya",
     url: siteUrl,
 
-    title: "Orviqen | Learn Technology, Build Skills, Shape Your Future",
+    title: "Eklavya | Learn Technology, Build Skills, Shape Your Future",
 
     description:
       "Explore practical learning paths across software development, AI, machine learning, data, cybersecurity, cloud and programming.",
@@ -125,7 +125,7 @@ export const metadata: Metadata = {
         url: "/og/default.jpg",
         width: 1200,
         height: 630,
-        alt: "Orviqen — Learn Technology, Build Skills, Shape Your Future",
+        alt: "Eklavya — Learn Technology, Build Skills, Shape Your Future",
       },
     ],
   },
@@ -133,7 +133,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Orviqen | Learn Technology, Build Skills, Shape Your Future",
+    title: "Eklavya | Learn Technology, Build Skills, Shape Your Future",
 
     description:
       "Explore practical courses and learning resources across modern technology.",
@@ -157,7 +157,7 @@ export const metadata: Metadata = {
 
   appleWebApp: {
     capable: true,
-    title: "Orviqen",
+    title: "Eklavya",
     statusBarStyle: "default",
   },
 

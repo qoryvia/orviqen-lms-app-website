@@ -14,47 +14,51 @@ interface CourseCareerProps {
 const CourseCareer = ({
   course,
 }: CourseCareerProps) => {
+  if (!course.careerPaths?.length) {
+    return null;
+  }
+
   return (
     <section>
-      <div className="border border-slate-200 bg-slate-950 p-6 text-white sm:p-8">
+      <div className="border border-slate-800 bg-slate-950 p-6 text-white sm:p-8">
         <div className="max-w-2xl">
-          <div className="flex h-10 w-10 items-center justify-center bg-[#A41034]">
-            <FiBriefcase size={18} />
+          <div className="flex h-9 w-9 items-center justify-center bg-[#A41034]">
+            <FiBriefcase size={17} />
           </div>
 
-          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-[#d16a84]">
+          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[#d16a84]">
             Career Paths
           </p>
 
           <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
-            Where this learning path can take you.
+            Skills aligned with real-world roles.
           </h2>
 
-          <p className="mt-4 text-sm leading-7 text-slate-300">
-            Build the skills and project experience needed to move
-            toward roles related to{" "}
+          <p className="mt-3 text-sm leading-6 text-slate-400">
+            The learning path is designed to help you build
+            practical skills relevant to roles associated with{" "}
             {course.shortTitle || course.title}.
           </p>
         </div>
 
-        <div className="mt-8 grid gap-3 sm:grid-cols-2">
-          {(course.careerPaths || []).map((career) => (
+        <div className="mt-7 grid gap-2.5 sm:grid-cols-2">
+          {course.careerPaths.map((career) => (
             <div
               key={career}
-              className="flex items-center gap-3 border border-white/10 bg-white/5 px-4 py-4"
+              className="flex items-center gap-3 border border-white/10 bg-white/[0.04] px-4 py-3.5"
             >
               <FiCheckCircle
-                size={17}
+                size={15}
                 className="shrink-0 text-[#d16a84]"
               />
 
-              <span className="text-sm font-medium text-slate-200">
+              <span className="text-xs font-medium text-slate-300">
                 {career}
               </span>
 
               <FiArrowRight
-                size={15}
-                className="ml-auto text-slate-500"
+                size={13}
+                className="ml-auto shrink-0 text-slate-600"
               />
             </div>
           ))}

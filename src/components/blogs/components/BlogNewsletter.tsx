@@ -1,19 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  FiArrowRight,
-  FiCheckCircle,
-  FiMail,
-} from "react-icons/fi";
+import { FiArrowRight, FiCheckCircle, FiMail } from "react-icons/fi";
 
 const BlogNewsletter = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (
-    event: React.FormEvent<HTMLFormElement>
-  ) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!email.trim()) {
@@ -42,7 +36,7 @@ const BlogNewsletter = () => {
 
             <p className="mt-4 text-sm leading-7 text-slate-400 sm:text-base">
               Receive occasional articles, practical guides and learning
-              insights from the Orviqen team.
+              insights from the Eklavya team.
             </p>
           </div>
 
@@ -60,16 +54,13 @@ const BlogNewsletter = () => {
                   </p>
 
                   <p className="mt-1 text-sm leading-6 text-slate-400">
-                    Thanks for subscribing to the Orviqen Journal.
+                    Thanks for subscribing to the Eklavya Journal.
                   </p>
                 </div>
               </div>
             </div>
           ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="w-full lg:w-[460px]"
-            >
+            <form onSubmit={handleSubmit} className="w-full lg:w-[460px]">
               <label
                 htmlFor="blog-email"
                 className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-slate-400"
@@ -82,9 +73,7 @@ const BlogNewsletter = () => {
                   id="blog-email"
                   type="email"
                   value={email}
-                  onChange={(event) =>
-                    setEmail(event.target.value)
-                  }
+                  onChange={(event) => setEmail(event.target.value)}
                   required
                   placeholder="you@example.com"
                   className="min-w-0 flex-1 border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white outline-none placeholder:text-slate-500 focus:border-[#A41034]"

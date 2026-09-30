@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Orviqen",
-    short_name: "Orviqen",
+    name: "Eklavya",
+    short_name: "Eklavya",
     description:
-      "Orviqen is a learning platform for software development, AI, data, cybersecurity and modern technology skills.",
+      "Eklavya is a learning platform for software development, AI, data, cybersecurity and modern technology skills.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

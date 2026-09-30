@@ -1,24 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  FiChevronDown,
-  FiChevronUp,
-  FiHelpCircle,
-} from "react-icons/fi";
+import { FiChevronDown, FiChevronUp, FiHelpCircle } from "react-icons/fi";
 
 import { contactFaqs } from "../data/contactData";
 
 const ContactFAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(
-    0
-  );
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section
-      id="faq"
-      className="border-t border-slate-200 bg-white"
-    >
+    <section id="faq" className="border-t border-slate-200 bg-white">
       <div className="px-6 py-14 xl:px-30 lg:py-16">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#A41034]">
@@ -30,8 +21,8 @@ const ContactFAQ = () => {
           </h2>
 
           <p className="mt-4 text-sm leading-7 text-slate-600">
-            Here are a few common questions about contacting Orviqen and
-            getting started with our learning programs.
+            Here are a few common questions about contacting Eklavya and getting
+            started with our learning programs.
           </p>
         </div>
 
@@ -46,16 +37,11 @@ const ContactFAQ = () => {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenIndex(isOpen ? null : index)
-                  }
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="flex w-full items-center gap-4 px-5 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <FiHelpCircle
-                    size={18}
-                    className="shrink-0 text-[#A41034]"
-                  />
+                  <FiHelpCircle size={18} className="shrink-0 text-[#A41034]" />
 
                   <span className="flex-1 text-sm font-semibold text-slate-900">
                     {item.question}

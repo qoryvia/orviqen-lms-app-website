@@ -1,18 +1,18 @@
-# Orviqen
+# Eklavya
 
-> Orviqen is a modern learning platform focused on software development, artificial intelligence, machine learning, data, cybersecurity, cloud, programming and technology careers.
+> Eklavya is a modern learning platform focused on software development, artificial intelligence, machine learning, data, cybersecurity, cloud, programming and technology careers.
 
 ## Website
 
-- [Home](https://your-domain.com/): Orviqen homepage and learning platform overview.
-- [Courses](https://your-domain.com/courses): Explore Orviqen learning programs and technical courses.
+- [Home](https://your-domain.com/): Eklavya homepage and learning platform overview.
+- [Courses](https://your-domain.com/courses): Explore Eklavya learning programs and technical courses.
 - [Blogs](https://your-domain.com/blogs): Technology, learning, career and software development articles.
-- [About](https://your-domain.com/about): Information about Orviqen.
+- [About](https://your-domain.com/about): Information about Eklavya.
 - [Contact](https://your-domain.com/contact): Contact and enquiry information.
 
 ## Courses
 
-Orviqen courses cover areas including:
+Eklavya courses cover areas including:
 
 - Frontend Development
 - Backend Development
@@ -32,7 +32,7 @@ Orviqen courses cover areas including:
 
 ## Blog Topics
 
-The Orviqen Journal includes content about:
+The Eklavya Journal includes content about:
 
 - Software Development
 - Frontend Engineering
@@ -50,7 +50,7 @@ The Orviqen Journal includes content about:
 
 ## Content
 
-Orviqen content is intended to provide educational and practical information about modern technology, programming and professional learning.
+Eklavya content is intended to provide educational and practical information about modern technology, programming and professional learning.
 
 ## Important URLs
 

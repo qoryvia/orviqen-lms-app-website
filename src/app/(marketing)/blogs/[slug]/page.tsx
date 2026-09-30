@@ -5,9 +5,7 @@ import React from "react";
 import Navbar from "@/components/navigations/Navbar";
 import Footer from "@/components/navigations/Footer";
 
-import {
-  blogs,
-} from "@/components/blogs/data/blogsData";
+import { blogs } from "@/components/blogs/data/blogsData";
 
 import BlogDetailHero from "@/components/blogs/blogDetail/components/BlogDetailHero";
 import BlogAuthorCard from "@/components/blogs/blogDetail/components/BlogAuthorCard";
@@ -35,20 +33,16 @@ export async function generateMetadata({
 }: BlogDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
 
-  const normalizedSlug = decodeURIComponent(slug)
-    .trim()
-    .toLowerCase();
+  const normalizedSlug = decodeURIComponent(slug).trim().toLowerCase();
 
   const blog = blogs.find(
-    (item) =>
-      item.slug.trim().toLowerCase() === normalizedSlug
+    (item) => item.slug.trim().toLowerCase() === normalizedSlug,
   );
 
   if (!blog) {
     return {
-      title: "Blog Not Found | Orviqen",
-      description:
-        "The requested blog article could not be found.",
+      title: "Blog Not Found | Eklavya",
+      description: "The requested blog article could not be found.",
     };
   }
 
@@ -64,14 +58,8 @@ export async function generateMetadata({
     },
 
     openGraph: {
-      title:
-        seo.socialTitle ||
-        seo.metaTitle ||
-        blog.title,
-      description:
-        seo.socialDescription ||
-        seo.metaDescription ||
-        blog.excerpt,
+      title: seo.socialTitle || seo.metaTitle || blog.title,
+      description: seo.socialDescription || seo.metaDescription || blog.excerpt,
       type: "article",
       publishedTime: blog.date,
       modifiedTime: blog.updatedDate || blog.date,
@@ -80,48 +68,30 @@ export async function generateMetadata({
       tags: blog.tags,
       images: [
         {
-          url:
-            seo.socialImage ||
-            blog.image,
+          url: seo.socialImage || blog.image,
           width: 1600,
           height: 1000,
-          alt:
-            blog.imageAlt ||
-            blog.title,
+          alt: blog.imageAlt || blog.title,
         },
       ],
     },
 
     twitter: {
       card: "summary_large_image",
-      title:
-        seo.socialTitle ||
-        seo.metaTitle ||
-        blog.title,
-      description:
-        seo.socialDescription ||
-        seo.metaDescription ||
-        blog.excerpt,
-      images: [
-        seo.socialImage ||
-        blog.image,
-      ],
+      title: seo.socialTitle || seo.metaTitle || blog.title,
+      description: seo.socialDescription || seo.metaDescription || blog.excerpt,
+      images: [seo.socialImage || blog.image],
     },
   };
 }
 
-const BlogDetailPage = async ({
-  params,
-}: BlogDetailPageProps) => {
+const BlogDetailPage = async ({ params }: BlogDetailPageProps) => {
   const { slug } = await params;
 
-  const normalizedSlug = decodeURIComponent(slug)
-    .trim()
-    .toLowerCase();
+  const normalizedSlug = decodeURIComponent(slug).trim().toLowerCase();
 
   const blog = blogs.find(
-    (item) =>
-      item.slug.trim().toLowerCase() === normalizedSlug
+    (item) => item.slug.trim().toLowerCase() === normalizedSlug,
   );
 
   if (!blog) {
@@ -130,36 +100,24 @@ const BlogDetailPage = async ({
 
   const relatedPosts =
     blog.relatedPosts
-      ?.map((relatedSlug) =>
-        blogs.find(
-          (item) => item.slug === relatedSlug
-        )
-      )
-      .filter(
-        (
-          item
-        ): item is NonNullable<typeof item> =>
-          Boolean(item)
-      ) || [];
+      ?.map((relatedSlug) => blogs.find((item) => item.slug === relatedSlug))
+      .filter((item): item is NonNullable<typeof item> => Boolean(item)) || [];
 
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: blog.title,
     description: blog.excerpt,
-    image: [
-      blog.image,
-    ],
+    image: [blog.image],
     datePublished: blog.date,
-    dateModified:
-      blog.updatedDate || blog.date,
+    dateModified: blog.updatedDate || blog.date,
     author: {
       "@type": "Person",
       name: blog.author,
     },
     publisher: {
       "@type": "Organization",
-      name: "Orviqen",
+      name: "Eklavya",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -197,9 +155,7 @@ const BlogDetailPage = async ({
 
                   <div className="mt-4 space-y-4">
                     <div className="flex items-center justify-between gap-4">
-                      <span className="text-sm text-slate-500">
-                        Category
-                      </span>
+                      <span className="text-sm text-slate-500">Category</span>
 
                       <span className="text-right text-sm font-semibold text-slate-900">
                         {blog.category}
@@ -219,9 +175,7 @@ const BlogDetailPage = async ({
                     )}
 
                     <div className="flex items-center justify-between gap-4">
-                      <span className="text-sm text-slate-500">
-                        Read time
-                      </span>
+                      <span className="text-sm text-slate-500">Read time</span>
 
                       <span className="text-sm font-semibold text-slate-900">
                         {blog.readTime}
@@ -230,9 +184,7 @@ const BlogDetailPage = async ({
 
                     {blog.views !== undefined && (
                       <div className="flex items-center justify-between gap-4">
-                        <span className="text-sm text-slate-500">
-                          Views
-                        </span>
+                        <span className="text-sm text-slate-500">Views</span>
 
                         <span className="text-sm font-semibold text-slate-900">
                           {blog.views.toLocaleString()}
@@ -242,9 +194,7 @@ const BlogDetailPage = async ({
 
                     {blog.comments !== undefined && (
                       <div className="flex items-center justify-between gap-4">
-                        <span className="text-sm text-slate-500">
-                          Comments
-                        </span>
+                        <span className="text-sm text-slate-500">Comments</span>
 
                         <span className="text-sm font-semibold text-slate-900">
                           {blog.comments}
@@ -275,9 +225,7 @@ const BlogDetailPage = async ({
           </div>
         </div>
 
-        {relatedPosts.length > 0 && (
-          <BlogRelatedPosts posts={relatedPosts} />
-        )}
+        {relatedPosts.length > 0 && <BlogRelatedPosts posts={relatedPosts} />}
 
         <BlogDetailCTA />
       </main>

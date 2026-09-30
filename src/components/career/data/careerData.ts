@@ -1,89 +1,149 @@
+import { BsFillLightbulbFill, BsFillMegaphoneFill } from "react-icons/bs";
 import {
   FiBookOpen,
-  FiBriefcase,
-  FiCompass,
-  FiGlobe,
-  FiHeart,
-  FiLayers,
+  FiCode,
   FiUsers,
-  FiZap,
+  FiTrendingUp,
+  FiSettings,
+  FiBriefcase,
+  FiShield,
+  FiTarget,
+  FiLayers,
+  FiAward,
+  FiRefreshCw,
+  FiHeart,
+  FiMessageCircle,
 } from "react-icons/fi";
+
+/* =========================================================
+   CAREER OPPORTUNITIES
+========================================================= */
 
 export const careerOpportunities = [
   {
-    title: "Education & Learning",
+    title: "Faculty & Teaching",
     description:
-      "Help shape learning experiences, academic programs and student-focused initiatives.",
+      "Teach academic subjects and help learners build strong foundations.",
     icon: FiBookOpen,
   },
   {
-    title: "Technology",
+    title: "Technical Training",
     description:
-      "Build and improve digital products, platforms and systems that support our learning ecosystem.",
-    icon: FiZap,
+      "Train students in programming, software development, cybersecurity, cloud, data and AI.",
+    icon: FiCode,
   },
   {
-    title: "Student Success",
+    title: "Academic & Student Success",
     description:
-      "Work directly with learners and help them navigate programs, opportunities and career decisions.",
+      "Support students through academic coordination, mentoring and student experience.",
     icon: FiUsers,
   },
   {
-    title: "Operations",
+    title: "Sales & Admissions",
     description:
-      "Support the teams, processes and systems that keep the organization moving effectively.",
-    icon: FiLayers,
+      "Help learners discover the right programs and guide them through admissions.",
+    icon: FiTrendingUp,
+  },
+  {
+    title: "Operations & Administration",
+    description:
+      "Coordinate people, programs, facilities and everyday organizational operations.",
+    icon: FiSettings,
+  },
+  {
+    title: "Marketing & Content",
+    description:
+      "Create campaigns, content and communication that connect people with our programs.",
+    icon: BsFillMegaphoneFill,
+  },
+  {
+    title: "Business & Corporate",
+    description:
+      "Support partnerships, finance, HR, strategy and broader corporate functions.",
+    icon: FiBriefcase,
+  },
+  {
+    title: "IT & Infrastructure",
+    description:
+      "Support internal systems, infrastructure, security and technology operations.",
+    icon: FiShield,
   },
 ];
+
+/* =========================================================
+   CAREER DEVELOPMENT
+========================================================= */
 
 export const careerDevelopment = [
   {
     number: "01",
-    icon: FiCompass,
-    title: "Meaningful Work",
+    title: "Learn",
     description:
-      "Work on projects connected to education, technology and the future of learners.",
+      "Keep developing your subject knowledge, technical expertise and professional capabilities.",
+    icon: FiBookOpen,
   },
   {
     number: "02",
-    icon: FiUsers,
-    title: "Collaborative Teams",
+    title: "Contribute",
     description:
-      "Work with people from different backgrounds, functions and areas of expertise.",
+      "Work on meaningful programs, projects and responsibilities where your expertise can create value.",
+    icon: FiTarget,
   },
   {
     number: "03",
-    icon: FiBookOpen,
-    title: "Continuous Learning",
+    title: "Grow",
     description:
-      "Keep developing your skills through practical experience, feedback and new challenges.",
+      "Take on greater ownership and expand your role as your experience and capabilities develop.",
+    icon: FiTrendingUp,
   },
   {
     number: "04",
-    icon: FiGlobe,
-    title: "Broader Opportunities",
+    title: "Evolve",
     description:
-      "Explore opportunities that connect education, technology and global career pathways.",
+      "Adapt to new technologies, ideas and changing learner needs throughout your journey.",
+    icon: FiRefreshCw,
   },
 ];
 
+/* =========================================================
+   WORKPLACE VALUES
+========================================================= */
+
 export const workplaceValues = [
   {
+    title: "Purpose",
+    description:
+      "Keep the learner and the quality of the outcome at the center of the work.",
     icon: FiHeart,
-    title: "People First",
-    description:
-      "We value respect, ownership and thoughtful collaboration.",
   },
   {
-    icon: FiZap,
-    title: "Build with Purpose",
+    title: "Collaboration",
     description:
-      "We focus on work that creates meaningful value for learners and partners.",
+      "Share knowledge, communicate clearly and work together across teams and disciplines.",
+    icon: FiMessageCircle,
   },
   {
-    icon: FiBriefcase,
-    title: "Take Ownership",
+    title: "Continuous Learning",
     description:
-      "We encourage people to take responsibility and make things better.",
+      "Stay curious, develop new capabilities and keep improving how you work.",
+    icon: FiAward,
+  },
+  {
+    title: "Ownership",
+    description:
+      "Take responsibility for your work and follow through on the outcomes you help create.",
+    icon: FiTarget,
+  },
+  {
+    title: "Innovation",
+    description:
+      "Question assumptions, explore better approaches and bring thoughtful ideas forward.",
+    icon: BsFillLightbulbFill,
+  },
+  {
+    title: "Excellence",
+    description:
+      "Aim for high standards in teaching, technology, student experience and execution.",
+    icon: FiLayers,
   },
 ];

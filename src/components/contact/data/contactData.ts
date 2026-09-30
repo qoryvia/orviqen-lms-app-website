@@ -36,7 +36,7 @@ export const contactReasons = [
 
 export const contactFaqs = [
   {
-    question: "What can I contact Orviqen about?",
+    question: "What can I contact Eklavya about?",
     answer:
       "You can contact us about courses, programs, admissions, learning paths, student support, partnerships and general enquiries.",
   },
@@ -51,7 +51,7 @@ export const contactFaqs = [
       "Yes. You can use the enquiry form to ask questions about course structure, technologies, duration and learning outcomes before making a decision.",
   },
   {
-    question: "Can organizations contact Orviqen?",
+    question: "Can organizations contact Eklavya?",
     answer:
       "Yes. Organizations and institutions can use the contact form for training, partnership, collaboration and other business enquiries.",
   },

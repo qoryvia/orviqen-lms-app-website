@@ -12,8 +12,7 @@ import LearningToolkit from "@/components/resources/components/LearningToolkit";
 import ResourcesFAQ from "@/components/resources/components/ResourcesFAQ";
 
 export const metadata: Metadata = {
-  title:
-    "Learning Roadmaps & Resources | Orviqen",
+  title: "Learning Roadmaps & Resources | Eklavya",
   description:
     "Explore step-by-step learning roadmaps for frontend, backend, full stack, AI, machine learning, data, cybersecurity, cloud, programming and more.",
   keywords: [
@@ -36,8 +35,7 @@ export const metadata: Metadata = {
     "technology learning resources",
   ],
   openGraph: {
-    title:
-      "Learning Roadmaps & Resources | Orviqen",
+    title: "Learning Roadmaps & Resources | Eklavya",
     description:
       "Find your learning path and follow a practical roadmap from fundamentals to projects and advanced skills.",
     type: "website",

@@ -14,12 +14,12 @@ import ApplyCTA from "@/components/apply/components/ApplyCTA";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Apply to Orviqen",
+  title: "Apply to Eklavya",
   description:
-    "Apply to Orviqen and explore learning programs across software development, AI, data, cybersecurity, programming and cloud technology.",
+    "Apply to Eklavya and explore learning programs across software development, AI, data, cybersecurity, programming and cloud technology.",
   keywords: [
-    "Orviqen application",
-    "apply to Orviqen",
+    "Eklavya application",
+    "apply to Eklavya",
     "technology courses",
     "software development courses",
     "AI courses",
@@ -28,9 +28,8 @@ export const metadata: Metadata = {
     "programming courses",
   ],
   openGraph: {
-    title: "Apply to Orviqen",
-    description:
-      "Start your learning journey with an Orviqen program.",
+    title: "Apply to Eklavya",
+    description: "Start your learning journey with an Eklavya program.",
     type: "website",
   },
 };
@@ -73,10 +72,7 @@ const ApplyPage = () => {
                         "Share your current experience",
                         "Explain your learning goals",
                       ].map((item, index) => (
-                        <div
-                          key={item}
-                          className="flex items-start gap-3"
-                        >
+                        <div key={item} className="flex items-start gap-3">
                           <span className="flex h-6 w-6 shrink-0 items-center justify-center bg-[#A41034]/5 text-[10px] font-bold text-[#A41034]">
                             {index + 1}
                           </span>
