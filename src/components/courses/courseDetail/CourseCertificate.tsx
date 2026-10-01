@@ -26,7 +26,7 @@ const CourseCertificate = ({
   const issueDate = "September 30, 2026";
 
   return (
-    <section>
+    <section className="py-10 lg:py-14">
       {/* Section Heading */}
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#A41034]">
@@ -63,7 +63,7 @@ const CourseCertificate = ({
 
           {/* Watermark */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <span className="select-none text-[clamp(5rem,15vw,14rem)] font-serif font-bold tracking-[0.12em] text-slate-900/[0.025]">
+            <span className="select-none text-[clamp(3em,15vw,14rem)] font-serif font-bold tracking-[0.12em] text-slate-900/[0.025]">
               EKLAVYA
             </span>
           </div>
@@ -141,7 +141,7 @@ const CourseCertificate = ({
             </p>
 
             {/* Bottom Information */}
-            <div className="absolute bottom-[10%] left-[9%] right-[9%] grid grid-cols-3 items-end">
+            <div className="absolute bottom-[10%] left-[9%] right-[9%] flex items-center justify-between">
               {/* Issue Date */}
               <div className="text-left">
                 <p className="text-[clamp(5px,0.6vw,9px)] uppercase tracking-[0.14em] text-slate-400">
@@ -156,7 +156,7 @@ const CourseCertificate = ({
               </div>
 
               {/* Seal */}
-              <div className="flex justify-center">
+              <div className="hidden md:flex justify-center">
                 <div className="relative flex h-[clamp(38px,5.5vw,76px)] w-[clamp(38px,5.5vw,76px)] items-center justify-center border-2 border-[#A41034]/70 bg-[#faf9f6]">
                   <div className="absolute inset-[10%] border border-[#A41034]/40" />
 

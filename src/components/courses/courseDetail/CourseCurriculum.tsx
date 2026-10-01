@@ -24,7 +24,7 @@ const CourseCurriculum = ({
   }
 
   return (
-    <section id="curriculum">
+    <section id="curriculum" className="py-10 lg:py-14">
       <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#A41034]">

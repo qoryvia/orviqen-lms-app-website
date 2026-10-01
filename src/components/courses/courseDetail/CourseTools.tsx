@@ -23,7 +23,7 @@ const CourseTools = ({
   }
 
   return (
-    <section>
+    <section className="py-10 lg:py-14">
       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#A41034]">
         Tools & Environment
       </p>

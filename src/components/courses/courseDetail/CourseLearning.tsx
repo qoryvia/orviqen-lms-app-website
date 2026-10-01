@@ -18,7 +18,7 @@ const CourseLearning = ({
   const audience = course.detailPage?.audience || [];
 
   return (
-    <section>
+    <section className="py-10 lg:py-14">
       <div className="grid gap-10 lg:grid-cols-2">
         {/* Outcomes */}
         <div>

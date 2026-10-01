@@ -19,7 +19,7 @@ const CourseCareer = ({
   }
 
   return (
-    <section>
+    <section className="py-10 lg:py-14">
       <div className="border border-slate-800 bg-slate-950 p-6 text-white sm:p-8">
         <div className="max-w-2xl">
           <div className="flex h-9 w-9 items-center justify-center bg-[#A41034]">

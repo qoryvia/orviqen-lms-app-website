@@ -11,9 +11,9 @@ import AboutApproach from "@/components/about/components/AboutApproach";
 import AboutCTA from "@/components/about/components/AboutCTA";
 
 export const metadata: Metadata = {
-  title: "About | HenleyCrest",
+  title: "About | Eklavya",
   description:
-    "Learn more about HenleyCrest, our approach to education, practical learning and global career development.",
+    "Learn more about Eklavya, our approach to education, practical learning and global career development.",
 };
 
 const AboutPage = () => {

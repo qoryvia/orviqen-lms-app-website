@@ -1,9 +1,16 @@
-import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type {
+  Metadata,
+  Viewport,
+} from "next";
+import {
+  Geist,
+  Geist_Mono,
+} from "next/font/google";
 import React from "react";
 
 import "./globals.css";
-import { AppProvider } from "@/context/AppContext";
+
+import { AppProvider } from "@/context/AppContext"
 import ChatAssistantController from "@/components/chatassistant/components/ChatAssistantController";
 
 const geistSans = Geist({
@@ -18,14 +25,20 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "http://localhost:3000";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(
+    siteUrl
+  ),
 
   title: {
-    default: "Eklavya | Learn Technology, Build Skills, Shape Your Future",
-    template: "%s | Eklavya",
+    default:
+      "Eklavya | Learn Technology, Build Skills, Shape Your Future",
+    template:
+      "%s | Eklavya",
   },
 
   description:
@@ -64,14 +77,10 @@ export const metadata: Metadata = {
 
   creator: "Eklavya",
   publisher: "Eklavya",
-
   applicationName: "Eklavya",
-
   category: "education",
-
-  classification: "Education, Online Learning, Technology",
-
-  referrer: "origin-when-cross-origin",
+  classification:
+    "Education, Online Learning, Technology",
 
   formatDetection: {
     telephone: false,
@@ -89,11 +98,13 @@ export const metadata: Metadata = {
         type: "image/png",
       },
     ],
+
     shortcut: [
       {
         url: "/favicon/favicon.ico",
       },
     ],
+
     apple: [
       {
         url: "/favicon/apple-touch-icon.png",
@@ -103,7 +114,8 @@ export const metadata: Metadata = {
     ],
   },
 
-  manifest: "/manifest.webmanifest",
+  manifest:
+    "/manifest.webmanifest",
 
   alternates: {
     canonical: "/",
@@ -115,7 +127,8 @@ export const metadata: Metadata = {
     siteName: "Eklavya",
     url: siteUrl,
 
-    title: "Eklavya | Learn Technology, Build Skills, Shape Your Future",
+    title:
+      "Eklavya | Learn Technology, Build Skills, Shape Your Future",
 
     description:
       "Explore practical learning paths across software development, AI, machine learning, data, cybersecurity, cloud and programming.",
@@ -133,12 +146,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Eklavya | Learn Technology, Build Skills, Shape Your Future",
+    title:
+      "Eklavya | Learn Technology, Build Skills, Shape Your Future",
 
     description:
       "Explore practical courses and learning resources across modern technology.",
 
-    images: ["/og/default.jpg"],
+    images: [
+      "/og/default.jpg",
+    ],
   },
 
   robots: {

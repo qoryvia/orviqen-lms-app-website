@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import faviconlogo from "../../assets/logos/favicon.png"
+import faviconlogo from "../../assets/logos/favicon.png";
 import {
   FiArrowRight,
   FiArrowUpRight,
@@ -43,9 +43,9 @@ const Footer = () => {
           <div className="max-w-md">
             <Link href="/" className="inline-flex items-center gap-3">
               {/* Institutional Monogram */}
-            <div className="flex h-11 w-11 items-center justify-center">
-                <Image src={faviconlogo} alt="henley crest logo"/>
-            </div>
+              <div className="flex h-11 w-11 items-center justify-center">
+                <Image src={faviconlogo} alt="henley crest logo" />
+              </div>
 
               {/* Wordmark */}
               <div className="leading-none">
@@ -104,14 +104,10 @@ const Footer = () => {
         {/* Contact Information */}
         <div className="grid gap-4 border-b border-white/10 py-7 sm:grid-cols-3">
           <a
-            href="mailto:hello@henleycrest.com"
+            href="mailto:hello@Eklavya.com"
             className="flex items-center gap-3 text-sm text-white/55 transition-colors hover:text-white"
           >
-            <FiMail
-              size={16}
-              className="shrink-0"
-              style={{ color: CRIMSON }}
-            />
+            <FiMail size={16} className="shrink-0" style={{ color: CRIMSON }} />
             hello@eklavyaed.com
           </a>
 
@@ -140,7 +136,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col gap-4 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-white/35">
-            © {new Date().getFullYear()} HenleyCrest. All rights reserved.
+            © {new Date().getFullYear()} Eklavya. All rights reserved.
           </p>
 
           <div className="flex flex-wrap items-center gap-5">

@@ -1,10 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import {
-  FiArrowRight,
-  FiBookOpen,
-  FiCompass,
-} from "react-icons/fi";
+import { FiArrowRight, FiBookOpen, FiCompass } from "react-icons/fi";
 
 const AboutHero = () => {
   return (
@@ -24,7 +20,7 @@ const AboutHero = () => {
           {/* Label */}
           <div className="mb-4 inline-flex items-center gap-2 border border-white/20 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white">
             <FiBookOpen />
-            About HenleyCrest
+            About Eklavya
           </div>
 
           {/* Heading */}
@@ -34,9 +30,9 @@ const AboutHero = () => {
 
           {/* Description */}
           <p className="mt-4 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
-            HenleyCrest is built around a simple idea: learning becomes more
-            meaningful when students have clear direction, practical
-            experience and a path connected to their future goals.
+            Eklavya is built around a simple idea: learning becomes more
+            meaningful when students have clear direction, practical experience
+            and a path connected to their future goals.
           </p>
 
           {/* Actions */}

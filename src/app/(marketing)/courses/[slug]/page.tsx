@@ -142,28 +142,11 @@ const CourseDetailPage = async ({ params }: CoursePageProps) => {
 
         <div className="border-b border-slate-200 bg-white">
           <div className="px-6 xl:px-30">
-            <div className="grid items-start gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-14 lg:py-14">
+            <div className="grid items-start gap-10  lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-14 py-10 lg:py-14">
               {/* Main Content */}
               <div className="min-w-0 space-y-14">
                 <CourseOverview course={course} />
-
                 <CourseHighlights course={course} />
-
-                <CourseLearning course={course} />
-
-                <CourseCurriculum course={course} />
-
-                <CourseProjects course={course} />
-
-                {course.certification && <CourseCertificate course={course} />}
-
-                <CourseCareer course={course} />
-
-                <CoursePrerequisites course={course} />
-
-                <CourseTools course={course} />
-
-                <CourseFAQ course={course} />
               </div>
 
               {/* Sidebar */}
@@ -175,7 +158,16 @@ const CourseDetailPage = async ({ params }: CoursePageProps) => {
             </div>
           </div>
         </div>
-
+        <div className="px-6 xl:px-30">
+          <CourseLearning course={course} />
+          <CourseCurriculum course={course} />
+          <CourseProjects course={course} />
+          {course.certification && <CourseCertificate course={course} />}
+          <CourseCareer course={course} />
+          <CoursePrerequisites course={course} />
+          <CourseTools course={course} />
+          <CourseFAQ course={course} />
+        </div>
         {relatedCourses.length > 0 && (
           <RelatedCourses courses={relatedCourses} />
         )}

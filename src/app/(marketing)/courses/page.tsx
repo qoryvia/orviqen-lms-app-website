@@ -9,7 +9,7 @@ import CourseSearch from "@/components/courses/components/CourseSearch";
 import CoursesCTA from "@/components/courses/components/CoursesCTA";
 
 export const metadata: Metadata = {
-  title: "Courses | HenleyCrest",
+  title: "Courses | Eklavya",
   description:
     "Explore technology courses across software development, data, AI, cybersecurity, cloud and career-focused learning.",
 };

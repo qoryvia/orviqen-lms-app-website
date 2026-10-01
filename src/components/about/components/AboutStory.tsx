@@ -35,15 +35,15 @@ const AboutStory = () => {
               </p>
 
               <p>
-                HenleyCrest was built around this challenge. Our approach is
-                focused on creating structured learning experiences that help
-                students move from curiosity to understanding and from
-                understanding to practical application.
+                Eklavya was built around this challenge. Our approach is focused
+                on creating structured learning experiences that help students
+                move from curiosity to understanding and from understanding to
+                practical application.
               </p>
 
               <p>
-                We bring learning paths, practical projects, career guidance
-                and future opportunities into a more connected experience. The
+                We bring learning paths, practical projects, career guidance and
+                future opportunities into a more connected experience. The
                 objective is not simply to complete a course, but to help
                 learners understand what they are building and where those
                 skills can take them.
@@ -52,8 +52,8 @@ const AboutStory = () => {
               <p>
                 Whether someone is beginning their technology journey,
                 developing existing skills or exploring a new career direction,
-                we aim to make the next step easier to understand and easier
-                to take.
+                we aim to make the next step easier to understand and easier to
+                take.
               </p>
             </div>
 

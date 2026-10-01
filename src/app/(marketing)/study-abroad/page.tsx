@@ -10,9 +10,8 @@ import StudyAbroadStories from "@/components/study-abroad/components/StudyAbroad
 import StudyAbroadFAQ from "@/components/study-abroad/components/StudyAbroadFAQ";
 import StudyAbroadCTA from "@/components/study-abroad/components/StudyAbroadCTA";
 
-
 export const metadata: Metadata = {
-  title: "Study Abroad | HenleyCrest",
+  title: "Study Abroad | Eklavya",
   description:
     "Explore study abroad destinations, international programs and personalized guidance for your global education journey.",
 };

@@ -27,7 +27,7 @@ const AboutCTA = () => {
                 </div>
 
                 <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
-                  Take the next step with HenleyCrest.
+                  Take the next step with Eklavya.
                 </h2>
 
                 <p className="mt-3 max-w-xl text-sm leading-6 text-white/65 sm:text-base">
