@@ -49,11 +49,21 @@ const Footer = () => {
 
               {/* Wordmark */}
               <div className="leading-none">
-                <div
-                  className="font-serif text-[23px] font-bold tracking-[-0.02em]"
-                  style={{ color: CRIMSON }}
+              <div className="flex items-baseline gap-1">
+                <span className="font-serif text-[21px] font-bold tracking-[-0.03em] text-gray-200 sm:text-[23px]">
+                  Eklavya
+                </span>
+
+                <span
+                  className="font-serif text-[21px] font-bold tracking-[-0.03em] sm:text-[23px]"
+                  style={{
+                    color: CRIMSON,
+                  }}
                 >
-                  EklavyaED
+                  Education
+                </span>
+              </div>
+                <div className="text-xs font-medium tracking-[0.08em] text-white/50"> 
                 </div>
 
                 <div className="mt-1 text-[8px] font-semibold uppercase tracking-[0.23em] text-white/45">

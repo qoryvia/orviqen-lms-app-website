@@ -9,9 +9,7 @@ import {
 import React from "react";
 
 import "./globals.css";
-
-import { AppProvider } from "@/context/AppContext"
-import ChatAssistantController from "@/components/chatassistant/components/ChatAssistantController";
+import AppProviders from "@/providers/AppProviders";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -201,10 +199,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
       <body className="min-h-screen bg-white font-sans text-slate-950">
-        <AppProvider>
+        <AppProviders>
           {children}
-          <ChatAssistantController />
-        </AppProvider>
+        </AppProviders>
       </body>
     </html>
   );

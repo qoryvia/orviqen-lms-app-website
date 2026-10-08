@@ -1,77 +1,12 @@
 import {
-  FiBarChart2,
   FiBookOpen,
   FiBriefcase,
-  FiCloud,
-  FiCode,
-  FiCpu,
-  FiDatabase,
   FiLayers,
-  FiLock,
   FiMonitor,
-  FiShield,
   FiTarget,
   FiUsers,
 } from "react-icons/fi";
 
-export const learningCategories = [
-  {
-    title: "Software Development",
-    description:
-      "Build websites, web applications, mobile apps, APIs, backend systems and production-ready software.",
-    icon: FiCode,
-    href: "#software-development",
-  },
-  {
-    title: "Data Science",
-    description:
-      "Learn Python, statistics, machine learning, data visualization and practical data science workflows.",
-    icon: FiDatabase,
-    href: "#programs",
-  },
-  {
-    title: "Data Analytics",
-    description:
-      "Turn raw data into dashboards, reports, insights and business decisions using modern analytics tools.",
-    icon: FiBarChart2,
-    href: "#programs",
-  },
-  {
-    title: "Cybersecurity",
-    description:
-      "Understand networks, application security, security operations, vulnerabilities and defensive security.",
-    icon: FiShield,
-    href: "#programs",
-  },
-  {
-    title: "Ethical Hacking",
-    description:
-      "Learn penetration testing, web security, reconnaissance, vulnerability assessment and security testing.",
-    icon: FiLock,
-    href: "#programs",
-  },
-  {
-    title: "Cloud & DevOps",
-    description:
-      "Learn cloud infrastructure, CI/CD, containers, deployment, monitoring and modern DevOps workflows.",
-    icon: FiCloud,
-    href: "#programs",
-  },
-  {
-    title: "AI & Machine Learning",
-    description:
-      "Learn machine learning, deep learning, AI applications and practical intelligent systems.",
-    icon: FiCpu,
-    href: "#programs",
-  },
-  {
-    title: "Career Programs",
-    description:
-      "Move from learning to practical experience through projects, internships and apprenticeship programs.",
-    icon: FiBriefcase,
-    href: "#career-programs",
-  },
-];
 
 export const softwareDevelopmentTracks = [
   {

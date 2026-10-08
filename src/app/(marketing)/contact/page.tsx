@@ -26,17 +26,20 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-slate-950">
       <Navbar />
 
       <main>
         <ContactHero />
 
-        <section className="bg-white">
-          <div className="px-6 py-14 xl:px-30 lg:py-20">
-            <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+        {/* Contact workspace */}
+        <section
+          id="contact"
+          className="scroll-mt-20 bg-slate-50"
+        >
+          <div className="px-6 py-12 xl:px-30 sm:py-14 lg:py-20">
+            <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:gap-12 xl:gap-16">
               <ContactInfo />
-
               <ContactForm />
             </div>
           </div>

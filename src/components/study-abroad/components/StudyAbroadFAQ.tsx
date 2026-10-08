@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  FiChevronDown,
-  FiHelpCircle,
-} from "react-icons/fi";
+import { FiChevronDown, FiHelpCircle } from "react-icons/fi";
 
 import { studyFAQs } from "../data/studyAbroadData";
 
@@ -37,9 +34,9 @@ const StudyAbroadFAQ = () => {
                   {faq.question}
                 </span>
 
-                <FiChevronDown
-                  className="shrink-0 text-slate-400 transition-transform group-open:rotate-180"
-                />
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-slate-200 bg-white">
+                  <FiChevronDown className="text-slate-400 transition-transform group-open:rotate-180" />
+                </span>
               </summary>
 
               <div className="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6">

@@ -13,7 +13,7 @@ import { blogs } from "../data/blogsData";
 import BlogSearch from "./BlogSearch";
 import BlogCard from "./BlogCard";
 
-const BLOGS_PER_PAGE = 6;
+const BLOGS_PER_PAGE = 8;
 
 const BlogGrid = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -117,7 +117,7 @@ const BlogGrid = () => {
         {/* Blog Results */}
         {visibleBlogs.length > 0 ? (
           <>
-            <div className="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-7 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {visibleBlogs.map((blog) => (
                 <BlogCard key={blog.id} blog={blog} />
               ))}

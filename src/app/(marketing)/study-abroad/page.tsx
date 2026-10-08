@@ -6,7 +6,6 @@ import StudyAbroadDestinations from "@/components/study-abroad/components/StudyA
 import StudyAbroadPathways from "@/components/study-abroad/components/StudyAbroadPathways";
 import StudyAbroadPrograms from "@/components/study-abroad/components/StudyAbroadPrograms";
 import StudyAbroadSupport from "@/components/study-abroad/components/StudyAbroadSupport";
-import StudyAbroadStories from "@/components/study-abroad/components/StudyAbroadStories";
 import StudyAbroadFAQ from "@/components/study-abroad/components/StudyAbroadFAQ";
 import StudyAbroadCTA from "@/components/study-abroad/components/StudyAbroadCTA";
 
@@ -27,7 +26,6 @@ const StudyAbroadPage = () => {
         <StudyAbroadPathways />
         <StudyAbroadPrograms />
         <StudyAbroadSupport />
-        <StudyAbroadStories />
         <StudyAbroadFAQ />
         <StudyAbroadCTA />
       </main>

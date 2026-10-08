@@ -21,126 +21,157 @@ interface CourseDetailHeroProps {
   course: Course;
 }
 
-const CourseDetailHero = ({
-  course,
-}: CourseDetailHeroProps) => {
-  const {
-    activeDiscount,
-    sellingPrice,
-    savings,
-  } = getCoursePricing(course.pricing);
+const CourseDetailHero = ({ course }: CourseDetailHeroProps) => {
+  const { activeDiscount, sellingPrice, savings } = getCoursePricing(
+    course.pricing
+  );
+
+  const heroTitle = course.detailPage?.heroTitle || course.title;
+  const heroDescription =
+    course.detailPage?.heroDescription ||
+    course.shortDescription ||
+    course.description;
 
   return (
-    <section className="border-b border-slate-800 bg-slate-950 text-white">
+    <section className="relative isolate min-h-[680px] overflow-hidden bg-black text-white">
+      {/* Background image */}
+      <div className="absolute inset-0 -z-20">
+        <Image
+          src={course.image}
+          alt={course.title}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* Black image shadow / overlay */}
+      <div className="absolute inset-0 -z-10 bg-black/70" />
+
+      {/* Stronger left-side readability */}
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.76)_38%,rgba(0,0,0,0.48)_72%,rgba(0,0,0,0.62)_100%)]" />
+
+      {/* Bottom fade */}
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-44 bg-gradient-to-t from-black via-black/60 to-transparent" />
+
       <div className="px-6 xl:px-30">
-        <div className="grid gap-10 py-10 lg:min-h-[580px] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:py-16">
-          {/* Left */}
-          <div className="max-w-3xl">
+        <div className="flex min-h-[680px] items-center py-12 lg:py-16">
+          <div className="w-full max-w-5xl">
+            {/* Back */}
             <Link
               href="/courses"
-              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-slate-400 transition-colors hover:text-white"
+              className="inline-flex items-center gap-2 text-sm font-medium text-white/65 transition-colors hover:text-white"
             >
-              <FiArrowLeft size={14} />
+              <FiArrowLeft size={16} />
               Back to Courses
             </Link>
 
-            <div className="mt-7 flex flex-wrap gap-2">
-              <span className="border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold text-slate-200">
+            {/* Category / status */}
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+              <span className="border border-white/20 bg-black/30 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90 backdrop-blur-sm">
                 {course.category}
               </span>
 
               {course.subCategory && (
-                <span className="border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold text-slate-400">
+                <span className="border border-white/15 bg-white/10 px-3 py-1.5 text-[11px] font-medium text-white/75 backdrop-blur-sm">
                   {course.subCategory}
                 </span>
               )}
 
               {course.popular && (
-                <span className="bg-[#A41034] px-3 py-1.5 text-[11px] font-semibold text-white">
-                  Popular Course
+                <span className="bg-[#A41034] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
+                  Popular
+                </span>
+              )}
+
+              {activeDiscount > 0 && (
+                <span className="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-[#A41034]">
+                  <FiTag size={12} />
+                  {activeDiscount}% Off
                 </span>
               )}
             </div>
 
-            <h1 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-              {course.detailPage?.heroTitle ||
-                course.title}
+            {/* Heading */}
+            <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-[1.04] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+              {heroTitle}
             </h1>
 
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base lg:text-lg">
-              {course.detailPage?.heroDescription ||
-                course.shortDescription ||
-                course.description}
+            {/* Description */}
+            <p className="mt-6 max-w-3xl text-sm leading-7 text-white/72 sm:text-base lg:text-lg lg:leading-8">
+              {heroDescription}
             </p>
 
-            {/* Meta */}
-            <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-xs text-slate-300 sm:text-sm">
+            {/* Important course information */}
+            <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/80">
               <span className="inline-flex items-center gap-2">
-                <FiClock className="text-[#d16a84]" />
+                <FiClock className="text-[#d16a84]" size={16} />
                 {course.duration}
               </span>
 
               <span className="inline-flex items-center gap-2">
-                <FiLayers className="text-[#d16a84]" />
+                <FiLayers className="text-[#d16a84]" size={16} />
                 {course.level}
               </span>
 
               {course.lessons && (
                 <span className="inline-flex items-center gap-2">
-                  <FiBookOpen className="text-[#d16a84]" />
+                  <FiBookOpen className="text-[#d16a84]" size={16} />
                   {course.lessons} lessons
                 </span>
               )}
 
               {course.rating !== undefined && (
                 <span className="inline-flex items-center gap-2">
-                  <FiStar className="fill-amber-400 text-amber-400" />
-                  {course.rating.toFixed(1)}
+                  <FiStar className="fill-amber-400 text-amber-400" size={16} />
+                  <span className="text-white">
+                    {course.rating.toFixed(1)}
+                  </span>
 
                   {course.reviewsCount !== undefined && (
-                    <span>
-                      ({course.reviewsCount.toLocaleString()})
+                    <span className="text-white/55">
+                      ({course.reviewsCount.toLocaleString()} reviews)
                     </span>
                   )}
                 </span>
               )}
             </div>
 
-            {/* Mobile Pricing */}
-            <div className="mt-8 border border-white/10 bg-white/5 p-5 lg:hidden">
-              <div className="flex flex-wrap items-end gap-3">
-                <span className="text-3xl font-bold">
-                  {formatCurrency(
-                    sellingPrice,
-                    course.pricing.currency
-                  )}
-                </span>
+            {/* Pricing */}
+            <div className="mt-8 flex flex-wrap items-end gap-x-4 gap-y-2">
+              <span className="text-3xl font-bold tracking-tight sm:text-4xl">
+                {formatCurrency(
+                  sellingPrice,
+                  course.pricing.currency
+                )}
+              </span>
 
-                {activeDiscount > 0 && (
-                  <span className="pb-1 text-sm text-slate-500 line-through">
+              {activeDiscount > 0 && (
+                <>
+                  <span className="pb-1 text-base text-white/45 line-through">
                     {formatCurrency(
                       course.pricing.fixedPrice,
                       course.pricing.currency
                     )}
                   </span>
-                )}
-              </div>
 
-              {activeDiscount > 0 && (
-                <p className="mt-1 text-xs font-semibold text-emerald-400">
-                  Save{" "}
-                  {formatCurrency(
-                    savings,
-                    course.pricing.currency
-                  )}
-                </p>
+                  <span className="pb-1 text-sm font-semibold text-emerald-400">
+                    Save{" "}
+                    {formatCurrency(
+                      savings,
+                      course.pricing.currency
+                    )}
+                  </span>
+                </>
               )}
             </div>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            {/* Actions */}
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/#lead"
-                className="inline-flex items-center justify-center gap-2 bg-[#A41034] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#8f0e2d]"
+                className="inline-flex items-center justify-center gap-2 bg-[#A41034] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-black/20 transition-all hover:bg-[#8f0e2d]"
               >
                 Enquire About Course
                 <FiArrowRight size={16} />
@@ -148,81 +179,18 @@ const CourseDetailHero = ({
 
               <a
                 href="#curriculum"
-                className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/15"
               >
                 View Curriculum
                 <FiArrowRight size={16} />
               </a>
             </div>
-          </div>
 
-          {/* Right */}
-          <div className="relative">
-            <div className="overflow-hidden border border-white/10 bg-white/5">
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={course.image}
-                  alt={course.title}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                  className="object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-
-                {activeDiscount > 0 && (
-                  <div className="absolute right-4 top-4">
-                    <span className="inline-flex items-center gap-1.5 bg-[#A41034] px-3 py-1.5 text-xs font-bold">
-                      <FiTag size={12} />
-                      {activeDiscount}% OFF
-                    </span>
-                  </div>
-                )}
-              </div>
-
-              <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
-                <div className="p-4">
-                  <p className="text-[10px] uppercase tracking-[0.12em] text-slate-500">
-                    Lessons
-                  </p>
-
-                  <p className="mt-1 text-lg font-semibold">
-                    {course.lessons || "—"}
-                  </p>
-                </div>
-
-                <div className="p-4">
-                  <p className="text-[10px] uppercase tracking-[0.12em] text-slate-500">
-                    Projects
-                  </p>
-
-                  <p className="mt-1 text-lg font-semibold">
-                    {course.projectsCount || "—"}
-                  </p>
-                </div>
-
-                <div className="p-4">
-                  <p className="text-[10px] uppercase tracking-[0.12em] text-slate-500">
-                    Mode
-                  </p>
-
-                  <p className="mt-1 text-lg font-semibold">
-                    {course.mode || "Online"}
-                  </p>
-                </div>
-              </div>
-            </div>
-
+            {/* Minimal supporting information */}
             {course.certification && (
-              <div className="mt-4 border border-white/10 bg-white p-4 text-slate-950">
-                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#A41034]">
-                  Certificate Included
-                </p>
-
-                <p className="mt-1 text-sm font-semibold">
-                  {course.certification}
-                </p>
+              <div className="mt-7 flex items-center gap-2 text-xs text-white/60">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                {course.certification}
               </div>
             )}
           </div>

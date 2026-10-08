@@ -1,96 +1,135 @@
 import React from "react";
 import {
-  FiBookOpen,
-  FiCode,
-  FiGitBranch,
-  FiTarget,
-  FiUsers,
-} from "react-icons/fi";
-
+  LuUsersRound,
+  LuTrophy,
+  LuArrowRight,
+} from "react-icons/lu";
+import { SlGraduation } from "react-icons/sl";
+import { SlControlPlay } from "react-icons/sl";
 const WhyStudentsChooseUs = () => {
-  const points = [
+  const stats = [
     {
-      icon: FiTarget,
-      title: "Clear Learning Paths",
-      description:
-        "Students know what to learn, why it matters and what comes next.",
+      icon: SlGraduation ,
+      value: "50,000+",
+      label: "Students Enrolled",
     },
     {
-      icon: FiCode,
-      title: "Practical Skills",
-      description:
-        "Concepts are connected to implementation, projects and real development tasks.",
+      icon: SlControlPlay ,
+      value: "1,200+",
+      label: "Online Courses",
     },
     {
-      icon: FiGitBranch,
-      title: "Industry Workflows",
-      description:
-        "Git, APIs, databases, testing, deployment and collaboration are part of the learning journey.",
+      icon: LuUsersRound,
+      value: "250+",
+      label: "Expert Instructors",
     },
     {
-      icon: FiBookOpen,
-      title: "Structured Learning",
-      description:
-        "Learning is organized into focused paths instead of disconnected topics.",
-    },
-    {
-      icon: FiUsers,
-      title: "Career Direction",
-      description:
-        "Students can connect learning with internships, apprenticeships and career preparation.",
+      icon: LuTrophy,
+      value: "98%",
+      label: "Satisfaction Rate",
     },
   ];
 
   return (
-    <section className="bg-white py-20 sm:py-24 lg:py-28">
+    <section className="bg-[#A51C30] py-8 sm:py-10 lg:py-11">
       <div className="px-6 xl:px-30">
+        <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_1.95fr] lg:gap-10">
+          {/* =====================================================
+              LEFT CONTENT
+          ====================================================== */}
+          <div>
+            <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-white/75 sm:text-[10px]">
+              Why Choose LearnHub?
+            </p>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-          {points.map((point) => {
-            const Icon = point.icon;
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-[26px]">
+              Learn Smarter. Achieve More.
+            </h2>
 
-            return (
-              <div
-                key={point.title}
-                className="border border-slate-200 bg-white p-6"
-              >
-                <Icon size={24} className="text-[#A51C30]" />
-
-                <h3 className="mt-5 text-lg font-bold text-slate-950">
-                  {point.title}
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  {point.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="mt-12 bg-[#A51C30] p-8 sm:p-10 lg:p-12">
-          <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
-                For Students & Freshers
-              </p>
-
-              <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
-                Stop asking “What should I learn next?”
-              </h3>
-
-              <p className="mt-4 max-w-3xl text-sm leading-7 text-white/80 sm:text-base">
-                Start with a structured roadmap based on your current level and
-                your target career direction.
-              </p>
-            </div>
+            <p className="mt-2 max-w-md text-[11px] leading-5 text-white/80 sm:text-xs sm:leading-5">
+              We provide high-quality courses, expert guidance, and a
+              supportive learning community to help you grow.
+            </p>
 
             <a
               href="#lead"
-              className="inline-flex items-center justify-center bg-white px-6 py-4 text-sm font-semibold text-[#A51C30] transition hover:bg-slate-100"
+              className="
+                mt-4
+                inline-flex
+                items-center
+                gap-2
+                bg-white
+                px-4
+                py-2.5
+                text-[10px]
+                font-semibold
+                text-[#A51C30]
+                transition-colors
+                hover:bg-slate-100
+                sm:px-5
+                sm:py-2.5
+                sm:text-[11px]
+              "
             >
-              Get My Roadmap
+              Start Learning Today
+              <LuArrowRight size={13} />
             </a>
+          </div>
+
+          {/* =====================================================
+              RIGHT STATS
+          ====================================================== */}
+          <div className="grid grid-cols-2 sm:grid-cols-4">
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+
+              return (
+                <div
+                  key={stat.label}
+                  className={`
+                    flex
+                    min-h-[120px]
+                    flex-col
+                    items-center
+                    justify-center
+                    px-4
+                    text-center
+                    sm:min-h-[135px]
+                    sm:px-5
+                    lg:min-h-[145px]
+                    ${
+                      index !== stats.length - 1
+                        ? "border-r border-white/15"
+                        : ""
+                    }
+                    ${
+                      index < 2
+                        ? "border-b border-white/15 sm:border-b-0"
+                        : ""
+                    }
+                  `}
+                >
+                  {/* Icon */}
+                  <div className="flex h-9 w-9 items-center justify-center text-white sm:h-10 sm:w-10">
+                    <Icon
+                      size={50}
+                      strokeWidth={1.4}
+                      className="sm:size-[36px]"
+                    />
+                  </div>
+
+                  {/* Value */}
+                  <div className="mt-3 text-xl font-semibold leading-none text-white sm:text-2xl lg:text-[23px]">
+                    {stat.value}
+                  </div>
+
+                  {/* Label */}
+                  <p className="mt-2 text-[9px] font-medium text-white/75 sm:text-[10px]">
+                    {stat.label}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
